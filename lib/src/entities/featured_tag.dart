@@ -5,7 +5,7 @@ part 'featured_tag.g.dart';
 
 /// Represents a hashtag that is featured on a profile.
 @freezed
-class FeaturedTag with _$FeaturedTag {
+abstract class FeaturedTag with _$FeaturedTag {
   const factory FeaturedTag({
     /// The internal ID of the featured tag in the database.
     @JsonKey(name: 'id') final String? id,

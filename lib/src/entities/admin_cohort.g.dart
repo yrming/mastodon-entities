@@ -6,19 +6,20 @@ part of 'admin_cohort.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AdminCohortImpl _$$AdminCohortImplFromJson(Map<String, dynamic> json) =>
-    _$AdminCohortImpl(
-      period: json['period'] == null
-          ? null
-          : DateTime.parse(json['period'] as String),
-      frequency:
-          $enumDecodeNullable(_$AdminCohortFrequencyEnumMap, json['frequency']),
-      data: (json['data'] as List<dynamic>?)
-          ?.map((e) => CohortData.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_AdminCohort _$AdminCohortFromJson(Map<String, dynamic> json) => _AdminCohort(
+  period: json['period'] == null
+      ? null
+      : DateTime.parse(json['period'] as String),
+  frequency: $enumDecodeNullable(
+    _$AdminCohortFrequencyEnumMap,
+    json['frequency'],
+  ),
+  data: (json['data'] as List<dynamic>?)
+      ?.map((e) => CohortData.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
-Map<String, dynamic> _$$AdminCohortImplToJson(_$AdminCohortImpl instance) =>
+Map<String, dynamic> _$AdminCohortToJson(_AdminCohort instance) =>
     <String, dynamic>{
       'period': instance.period?.toIso8601String(),
       'frequency': _$AdminCohortFrequencyEnumMap[instance.frequency],
@@ -30,15 +31,13 @@ const _$AdminCohortFrequencyEnumMap = {
   AdminCohortFrequency.month: 'month',
 };
 
-_$CohortDataImpl _$$CohortDataImplFromJson(Map<String, dynamic> json) =>
-    _$CohortDataImpl(
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
-      rate: (json['rate'] as num?)?.toDouble(),
-      value: (json['value'] as num?)?.toInt(),
-    );
+_CohortData _$CohortDataFromJson(Map<String, dynamic> json) => _CohortData(
+  date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
+  rate: (json['rate'] as num?)?.toDouble(),
+  value: (json['value'] as num?)?.toInt(),
+);
 
-Map<String, dynamic> _$$CohortDataImplToJson(_$CohortDataImpl instance) =>
+Map<String, dynamic> _$CohortDataToJson(_CohortData instance) =>
     <String, dynamic>{
       'date': instance.date?.toIso8601String(),
       'rate': instance.rate,

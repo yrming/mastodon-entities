@@ -7,7 +7,7 @@ part 'domain_block.g.dart';
 
 /// Represents a domain that is blocked by the instance.
 @freezed
-class DomainBlock with _$DomainBlock {
+abstract class DomainBlock with _$DomainBlock {
   const factory DomainBlock({
     /// The domain which is blocked. This may be obfuscated or partially
     /// censored.

@@ -6,7 +6,7 @@ part 'filter_keyword.g.dart';
 /// Represents a keyword that, if matched, should cause the filter action to be
 /// taken.
 @freezed
-class FilterKeyword with _$FilterKeyword {
+abstract class FilterKeyword with _$FilterKeyword {
   const factory FilterKeyword({
     /// The ID of the FilterKeyword in the database.
     @JsonKey(name: 'id') final String? id,

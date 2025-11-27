@@ -6,15 +6,14 @@ part of 'rule.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RuleImpl _$$RuleImplFromJson(Map<String, dynamic> json) => _$RuleImpl(
-      id: json['id'] as String?,
-      text: json['text'] as String?,
-      hint: json['hint'] as String?,
-    );
+_Rule _$RuleFromJson(Map<String, dynamic> json) => _Rule(
+  id: json['id'] as String?,
+  text: json['text'] as String?,
+  hint: json['hint'] as String?,
+);
 
-Map<String, dynamic> _$$RuleImplToJson(_$RuleImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'text': instance.text,
-      'hint': instance.hint,
-    };
+Map<String, dynamic> _$RuleToJson(_Rule instance) => <String, dynamic>{
+  'id': instance.id,
+  'text': instance.text,
+  'hint': instance.hint,
+};

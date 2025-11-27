@@ -10,7 +10,7 @@ part 'suggestion.g.dart';
 /// Represents a suggested account to follow and an associated reason for the
 /// suggestion.
 @freezed
-class Suggestion with _$Suggestion {
+abstract class Suggestion with _$Suggestion {
   const factory Suggestion({
     /// The reason this account is being suggested.
     @JsonKey(name: 'source') final SuggestionSource? source,

@@ -5,7 +5,7 @@ part 'rule.g.dart';
 
 /// Represents a rule that server users should follow.
 @freezed
-class Rule with _$Rule {
+abstract class Rule with _$Rule {
   const factory Rule({
     /// An identifier for the rule.
     @JsonKey(name: 'id') final String? id,

@@ -6,7 +6,7 @@ part 'appeal.freezed.dart';
 part 'appeal.g.dart';
 
 @freezed
-class Appeal with _$Appeal {
+abstract class Appeal with _$Appeal {
   const factory Appeal({
     /// Text of the appeal from the moderated account to the moderators.
     @JsonKey(name: 'text') final String? text,

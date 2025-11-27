@@ -6,22 +6,22 @@ part of 'suggestion.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SuggestionImpl _$$SuggestionImplFromJson(Map<String, dynamic> json) =>
-    _$SuggestionImpl(
-      source: $enumDecodeNullable(_$SuggestionSourceEnumMap, json['source']),
-      sources: (json['sources'] as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$SuggestionSourcesEnumMap, e))
-          .toList(),
-      account: json['account'] == null
-          ? null
-          : Account.fromJson(json['account'] as Map<String, dynamic>),
-    );
+_Suggestion _$SuggestionFromJson(Map<String, dynamic> json) => _Suggestion(
+  source: $enumDecodeNullable(_$SuggestionSourceEnumMap, json['source']),
+  sources: (json['sources'] as List<dynamic>?)
+      ?.map((e) => $enumDecode(_$SuggestionSourcesEnumMap, e))
+      .toList(),
+  account: json['account'] == null
+      ? null
+      : Account.fromJson(json['account'] as Map<String, dynamic>),
+);
 
-Map<String, dynamic> _$$SuggestionImplToJson(_$SuggestionImpl instance) =>
+Map<String, dynamic> _$SuggestionToJson(_Suggestion instance) =>
     <String, dynamic>{
       'source': _$SuggestionSourceEnumMap[instance.source],
-      'sources':
-          instance.sources?.map((e) => _$SuggestionSourcesEnumMap[e]!).toList(),
+      'sources': instance.sources
+          ?.map((e) => _$SuggestionSourcesEnumMap[e]!)
+          .toList(),
       'account': instance.account,
     };
 

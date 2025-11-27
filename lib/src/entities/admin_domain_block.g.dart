@@ -6,9 +6,8 @@ part of 'admin_domain_block.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AdminDomainBlockImpl _$$AdminDomainBlockImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AdminDomainBlockImpl(
+_AdminDomainBlock _$AdminDomainBlockFromJson(Map<String, dynamic> json) =>
+    _AdminDomainBlock(
       id: json['id'] as String?,
       domain: json['domain'] as String?,
       digest: json['digest'] as String?,
@@ -16,7 +15,9 @@ _$AdminDomainBlockImpl _$$AdminDomainBlockImplFromJson(
           ? null
           : DateTime.parse(json['created_at'] as String),
       severity: $enumDecodeNullable(
-          _$AdminDomainBlockSeverityEnumMap, json['severity']),
+        _$AdminDomainBlockSeverityEnumMap,
+        json['severity'],
+      ),
       rejectMedia: json['reject_media'] as bool?,
       rejectReports: json['reject_reports'] as bool?,
       privateComment: json['private_comment'] as String?,
@@ -24,8 +25,7 @@ _$AdminDomainBlockImpl _$$AdminDomainBlockImplFromJson(
       obfuscate: json['obfuscate'] as bool?,
     );
 
-Map<String, dynamic> _$$AdminDomainBlockImplToJson(
-        _$AdminDomainBlockImpl instance) =>
+Map<String, dynamic> _$AdminDomainBlockToJson(_AdminDomainBlock instance) =>
     <String, dynamic>{
       'id': instance.id,
       'domain': instance.domain,

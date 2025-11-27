@@ -6,7 +6,7 @@ part 'relationship.g.dart';
 /// Represents the relationship between accounts, such as following / blocking
 /// / muting / etc.
 @freezed
-class Relationship with _$Relationship {
+abstract class Relationship with _$Relationship {
   const factory Relationship({
     /// The account ID.
     @JsonKey(name: 'id') final String? id,

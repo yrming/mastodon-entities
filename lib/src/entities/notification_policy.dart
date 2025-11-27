@@ -5,7 +5,7 @@ part 'notification_policy.g.dart';
 
 /// Represents the notification filtering policy of the user.
 @freezed
-class NotificationPolicy with _$NotificationPolicy {
+abstract class NotificationPolicy with _$NotificationPolicy {
   const factory NotificationPolicy({
     /// Whether to filter notifications from accounts the user is not following.
     @JsonKey(name: 'filter_not_following') final bool? filterNotFollowing,
@@ -32,7 +32,7 @@ class NotificationPolicy with _$NotificationPolicy {
 }
 
 @freezed
-class NotificationPolicySummary with _$NotificationPolicySummary {
+abstract class NotificationPolicySummary with _$NotificationPolicySummary {
   const factory NotificationPolicySummary({
     /// Number of different accounts from which the user has non-dismissed
     /// filtered notifications. Capped at 100.

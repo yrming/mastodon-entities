@@ -4,7 +4,7 @@ part 'accounts_fields_attributes.freezed.dart';
 part 'accounts_fields_attributes.g.dart';
 
 @freezed
-class AccountsFieldsAttributes with _$AccountsFieldsAttributes {
+abstract class AccountsFieldsAttributes with _$AccountsFieldsAttributes {
   const factory AccountsFieldsAttributes({
     @JsonKey(name: 'fields_attributes')
     required final Map<String, FieldsAttribute> fieldsAttributes,
@@ -15,7 +15,7 @@ class AccountsFieldsAttributes with _$AccountsFieldsAttributes {
 }
 
 @freezed
-class FieldsAttribute with _$FieldsAttribute {
+abstract class FieldsAttribute with _$FieldsAttribute {
   const factory FieldsAttribute({
     @JsonKey(name: 'name') required final String name,
     @JsonKey(name: 'value') required final String value,

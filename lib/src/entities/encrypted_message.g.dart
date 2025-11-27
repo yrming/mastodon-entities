@@ -6,9 +6,8 @@ part of 'encrypted_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$EncryptedMessageImpl _$$EncryptedMessageImplFromJson(
-        Map<String, dynamic> json) =>
-    _$EncryptedMessageImpl(
+_EncryptedMessage _$EncryptedMessageFromJson(Map<String, dynamic> json) =>
+    _EncryptedMessage(
       id: json['id'] as String?,
       accountId: json['account_id'] as String?,
       deviceId: json['device_id'] as String?,
@@ -21,8 +20,7 @@ _$EncryptedMessageImpl _$$EncryptedMessageImplFromJson(
           : DateTime.parse(json['created_at'] as String),
     );
 
-Map<String, dynamic> _$$EncryptedMessageImplToJson(
-        _$EncryptedMessageImpl instance) =>
+Map<String, dynamic> _$EncryptedMessageToJson(_EncryptedMessage instance) =>
     <String, dynamic>{
       'id': instance.id,
       'account_id': instance.accountId,

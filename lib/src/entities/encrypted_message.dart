@@ -7,7 +7,7 @@ part 'encrypted_message.g.dart';
 
 /// Represents an encrypted message.
 @freezed
-class EncryptedMessage with _$EncryptedMessage {
+abstract class EncryptedMessage with _$EncryptedMessage {
   const factory EncryptedMessage({
     /// The ID of the EncryptedMessage in the database.
     @JsonKey(name: 'id') final String? id,

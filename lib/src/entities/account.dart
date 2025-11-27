@@ -9,7 +9,7 @@ part 'account.g.dart';
 
 /// Represents a user of Mastodon and their associated profile.
 @freezed
-class Account with _$Account {
+abstract class Account with _$Account {
   const factory Account({
     /// The account id.
     @JsonKey(name: 'id') final String? id,
@@ -116,7 +116,7 @@ class Account with _$Account {
 }
 
 @freezed
-class AccountField with _$AccountField {
+abstract class AccountField with _$AccountField {
   const factory AccountField({
     /// The key of a given field's key-value pair.
     @JsonKey(name: 'name') final String? name,
@@ -133,7 +133,7 @@ class AccountField with _$AccountField {
 }
 
 @freezed
-class AccountSource with _$AccountSource {
+abstract class AccountSource with _$AccountSource {
   const factory AccountSource({
     /// Profile bio, in plain-text instead of in HTML.
     @JsonKey(name: 'note') final String? note,

@@ -6,8 +6,8 @@ part of 'admin_measure.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AdminMeasureImpl _$$AdminMeasureImplFromJson(Map<String, dynamic> json) =>
-    _$AdminMeasureImpl(
+_AdminMeasure _$AdminMeasureFromJson(Map<String, dynamic> json) =>
+    _AdminMeasure(
       key: json['key'] as String?,
       unit: json['unit'] as String?,
       total: json['total'] as String?,
@@ -18,7 +18,7 @@ _$AdminMeasureImpl _$$AdminMeasureImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$AdminMeasureImplToJson(_$AdminMeasureImpl instance) =>
+Map<String, dynamic> _$AdminMeasureToJson(_AdminMeasure instance) =>
     <String, dynamic>{
       'key': instance.key,
       'unit': instance.unit,
@@ -28,16 +28,15 @@ Map<String, dynamic> _$$AdminMeasureImplToJson(_$AdminMeasureImpl instance) =>
       'data': instance.data,
     };
 
-_$AdminMeasureDataImpl _$$AdminMeasureDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AdminMeasureDataImpl(
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+_AdminMeasureData _$AdminMeasureDataFromJson(Map<String, dynamic> json) =>
+    _AdminMeasureData(
+      date: json['date'] == null
+          ? null
+          : DateTime.parse(json['date'] as String),
       value: json['value'] as String?,
     );
 
-Map<String, dynamic> _$$AdminMeasureDataImplToJson(
-        _$AdminMeasureDataImpl instance) =>
+Map<String, dynamic> _$AdminMeasureDataToJson(_AdminMeasureData instance) =>
     <String, dynamic>{
       'date': instance.date?.toIso8601String(),
       'value': instance.value,

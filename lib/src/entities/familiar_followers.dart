@@ -7,7 +7,7 @@ part 'familiar_followers.g.dart';
 
 /// Represents a subset of your follows who also follow some other user.
 @freezed
-class FamiliarFollowers with _$FamiliarFollowers {
+abstract class FamiliarFollowers with _$FamiliarFollowers {
   const factory FamiliarFollowers({
     /// The ID of the Account in the database.
     @JsonKey(name: 'id') final String? id,

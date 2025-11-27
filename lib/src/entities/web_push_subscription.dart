@@ -5,7 +5,7 @@ part 'web_push_subscription.g.dart';
 
 /// Represents a subscription to the push streaming server.
 @freezed
-class WebPushSubscription with _$WebPushSubscription {
+abstract class WebPushSubscription with _$WebPushSubscription {
   const factory WebPushSubscription({
     /// The ID of the Web Push subscription in the database.
     @JsonKey(name: 'id') final int? id,
@@ -25,7 +25,7 @@ class WebPushSubscription with _$WebPushSubscription {
 }
 
 @freezed
-class WebPushSubscriptionAlerts with _$WebPushSubscriptionAlerts {
+abstract class WebPushSubscriptionAlerts with _$WebPushSubscriptionAlerts {
   const factory WebPushSubscriptionAlerts({
     /// Receive a push notification when someone else has mentioned you in a
     /// status?

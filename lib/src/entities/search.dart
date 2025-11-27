@@ -9,7 +9,7 @@ part 'search.g.dart';
 
 /// Represents the results of a search.
 @freezed
-class Search with _$Search {
+abstract class Search with _$Search {
   const factory Search({
     /// Accounts which match the given query.
     @JsonKey(name: 'accounts') final List<Account>? accounts,

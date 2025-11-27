@@ -5,7 +5,7 @@ part 'custom_emoji.g.dart';
 
 /// Represents a custom emoji.
 @freezed
-class CustomEmoji with _$CustomEmoji {
+abstract class CustomEmoji with _$CustomEmoji {
   const factory CustomEmoji({
     /// The name of the custom emoji.
     @JsonKey(name: 'shortcode') final String? shortcode,

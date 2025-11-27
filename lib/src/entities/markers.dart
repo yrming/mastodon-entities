@@ -7,11 +7,9 @@ part 'markers.g.dart';
 
 /// Hash of timeline key and associated [Marker].
 @freezed
-class Markers with _$Markers {
-  const factory Markers({
-    final Marker? notifications,
-    final Marker? home,
-  }) = _Markers;
+abstract class Markers with _$Markers {
+  const factory Markers({final Marker? notifications, final Marker? home}) =
+      _Markers;
 
   factory Markers.fromJson(final Map<String, dynamic> json) =>
       _$MarkersFromJson(json);

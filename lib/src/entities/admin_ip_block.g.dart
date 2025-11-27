@@ -6,12 +6,14 @@ part of 'admin_ip_block.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AdminIpBlockImpl _$$AdminIpBlockImplFromJson(Map<String, dynamic> json) =>
-    _$AdminIpBlockImpl(
+_AdminIpBlock _$AdminIpBlockFromJson(Map<String, dynamic> json) =>
+    _AdminIpBlock(
       id: json['id'] as String?,
       ip: json['ip'] as String?,
-      severity:
-          $enumDecodeNullable(_$AdminIpBlockSeverityEnumMap, json['severity']),
+      severity: $enumDecodeNullable(
+        _$AdminIpBlockSeverityEnumMap,
+        json['severity'],
+      ),
       comment: json['comment'] as String?,
       createdAt: json['created_at'] == null
           ? null
@@ -21,7 +23,7 @@ _$AdminIpBlockImpl _$$AdminIpBlockImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['expires_at'] as String),
     );
 
-Map<String, dynamic> _$$AdminIpBlockImplToJson(_$AdminIpBlockImpl instance) =>
+Map<String, dynamic> _$AdminIpBlockToJson(_AdminIpBlock instance) =>
     <String, dynamic>{
       'id': instance.id,
       'ip': instance.ip,

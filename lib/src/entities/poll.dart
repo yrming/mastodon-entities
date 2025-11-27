@@ -7,7 +7,7 @@ part 'poll.g.dart';
 
 /// Represents a poll attached to a status.
 @freezed
-class Poll with _$Poll {
+abstract class Poll with _$Poll {
   const factory Poll({
     /// The ID of the poll in the database.
     @JsonKey(name: 'id') final String? id,
@@ -46,7 +46,7 @@ class Poll with _$Poll {
 }
 
 @freezed
-class PollOption with _$PollOption {
+abstract class PollOption with _$PollOption {
   const factory PollOption({
     /// The text value of the poll option.
     @JsonKey(name: 'title') final String? title,

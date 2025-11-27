@@ -6,19 +6,21 @@ part of 'preferences.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PreferencesImpl _$$PreferencesImplFromJson(Map<String, dynamic> json) =>
-    _$PreferencesImpl(
-      postingDefaultVisibility: $enumDecodeNullable(
-          _$StatusVisibilityEnumMap, json['posting:default:visibility']),
-      postingDefaultSensitive: json['posting:default:sensitive'] as bool?,
-      postingDefaultLanguage: json['posting:default:language'] as String?,
-      readingExpandMedia: $enumDecodeNullable(
-          _$PreferencesReadingExpandMediaEnumMap,
-          json['posting:default:media']),
-      readingExpandSpoilers: json['posting:default:spoilers'] as bool?,
-    );
+_Preferences _$PreferencesFromJson(Map<String, dynamic> json) => _Preferences(
+  postingDefaultVisibility: $enumDecodeNullable(
+    _$StatusVisibilityEnumMap,
+    json['posting:default:visibility'],
+  ),
+  postingDefaultSensitive: json['posting:default:sensitive'] as bool?,
+  postingDefaultLanguage: json['posting:default:language'] as String?,
+  readingExpandMedia: $enumDecodeNullable(
+    _$PreferencesReadingExpandMediaEnumMap,
+    json['posting:default:media'],
+  ),
+  readingExpandSpoilers: json['posting:default:spoilers'] as bool?,
+);
 
-Map<String, dynamic> _$$PreferencesImplToJson(_$PreferencesImpl instance) =>
+Map<String, dynamic> _$PreferencesToJson(_Preferences instance) =>
     <String, dynamic>{
       'posting:default:visibility':
           _$StatusVisibilityEnumMap[instance.postingDefaultVisibility],

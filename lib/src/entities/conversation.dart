@@ -8,7 +8,7 @@ part 'conversation.g.dart';
 
 /// Represents a conversation with "direct message" visibility.
 @freezed
-class Conversation with _$Conversation {
+abstract class Conversation with _$Conversation {
   const factory Conversation({
     /// The ID of the conversation in the database.
     @JsonKey(name: 'id') final String? id,

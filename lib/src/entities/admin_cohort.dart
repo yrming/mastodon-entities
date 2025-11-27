@@ -7,7 +7,7 @@ part 'admin_cohort.g.dart';
 
 /// Represents a retention metric.
 @freezed
-class AdminCohort with _$AdminCohort {
+abstract class AdminCohort with _$AdminCohort {
   const factory AdminCohort({
     /// The timestamp for the start of the period, at midnight.
     @JsonKey(name: 'period') final DateTime? period,
@@ -24,7 +24,7 @@ class AdminCohort with _$AdminCohort {
 }
 
 @freezed
-class CohortData with _$CohortData {
+abstract class CohortData with _$CohortData {
   const factory CohortData({
     /// The timestamp for the start of the bucket, at midnight.
     @JsonKey(name: 'date') final DateTime? date,

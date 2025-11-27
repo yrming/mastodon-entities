@@ -6,7 +6,7 @@ part 'filter_status.g.dart';
 /// Represents a status ID that, if matched, should cause the filter action to
 /// be taken.
 @freezed
-class FilterStatus with _$FilterStatus {
+abstract class FilterStatus with _$FilterStatus {
   const factory FilterStatus({
     /// The ID of the FilterStatus in the database.
     @JsonKey(name: 'id') final String? id,

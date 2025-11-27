@@ -8,7 +8,7 @@ part 'relationship_severance_event.g.dart';
 /// Summary of a moderation or block event that caused follow relationships to
 /// be severed.
 @freezed
-class RelationshipSeveranceEvent with _$RelationshipSeveranceEvent {
+abstract class RelationshipSeveranceEvent with _$RelationshipSeveranceEvent {
   const factory RelationshipSeveranceEvent({
     /// The ID of the relationship severance event in the database.
     @JsonKey(name: 'id') final String? id,
@@ -33,6 +33,5 @@ class RelationshipSeveranceEvent with _$RelationshipSeveranceEvent {
 
   factory RelationshipSeveranceEvent.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$RelationshipSeveranceEventFromJson(json);
+  ) => _$RelationshipSeveranceEventFromJson(json);
 }

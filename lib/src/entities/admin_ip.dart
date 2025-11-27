@@ -5,7 +5,7 @@ part 'admin_ip.g.dart';
 
 /// Represents an IP address associated with a user.
 @freezed
-class AdminIp with _$AdminIp {
+abstract class AdminIp with _$AdminIp {
   const factory AdminIp({
     /// The IP address.
     @JsonKey(name: 'ip') final String? ip,

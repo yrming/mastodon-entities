@@ -6,31 +6,30 @@ part of 'preview_card.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PreviewCardImpl _$$PreviewCardImplFromJson(Map<String, dynamic> json) =>
-    _$PreviewCardImpl(
-      url: json['url'] as String?,
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      type: $enumDecodeNullable(_$PreviewCardTypeEnumMap, json['type']),
-      authorName: json['author_name'] as String?,
-      authorUrl: json['author_url'] as String?,
-      providerName: json['provider_name'] as String?,
-      providerUrl: json['provider_url'] as String?,
-      html: json['html'] as String?,
-      width: (json['width'] as num?)?.toInt(),
-      height: (json['height'] as num?)?.toInt(),
-      image: json['image'] as String?,
-      embedUrl: json['embed_url'] as String?,
-      blurhash: json['blurhash'] as String?,
-      authors: (json['authors'] as List<dynamic>?)
-          ?.map((e) => PreviewCardAuthor.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      publishedAt: json['published_at'] == null
-          ? null
-          : DateTime.parse(json['published_at'] as String),
-    );
+_PreviewCard _$PreviewCardFromJson(Map<String, dynamic> json) => _PreviewCard(
+  url: json['url'] as String?,
+  title: json['title'] as String?,
+  description: json['description'] as String?,
+  type: $enumDecodeNullable(_$PreviewCardTypeEnumMap, json['type']),
+  authorName: json['author_name'] as String?,
+  authorUrl: json['author_url'] as String?,
+  providerName: json['provider_name'] as String?,
+  providerUrl: json['provider_url'] as String?,
+  html: json['html'] as String?,
+  width: (json['width'] as num?)?.toInt(),
+  height: (json['height'] as num?)?.toInt(),
+  image: json['image'] as String?,
+  embedUrl: json['embed_url'] as String?,
+  blurhash: json['blurhash'] as String?,
+  authors: (json['authors'] as List<dynamic>?)
+      ?.map((e) => PreviewCardAuthor.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  publishedAt: json['published_at'] == null
+      ? null
+      : DateTime.parse(json['published_at'] as String),
+);
 
-Map<String, dynamic> _$$PreviewCardImplToJson(_$PreviewCardImpl instance) =>
+Map<String, dynamic> _$PreviewCardToJson(_PreviewCard instance) =>
     <String, dynamic>{
       'url': instance.url,
       'title': instance.title,
@@ -57,34 +56,33 @@ const _$PreviewCardTypeEnumMap = {
   PreviewCardType.rich: 'rich',
 };
 
-_$TrendsLinkImpl _$$TrendsLinkImplFromJson(Map<String, dynamic> json) =>
-    _$TrendsLinkImpl(
-      url: json['url'] as String?,
-      title: json['title'] as String?,
-      description: json['description'] as String?,
-      type: $enumDecodeNullable(_$PreviewCardTypeEnumMap, json['type']),
-      authorName: json['author_name'] as String?,
-      authorUrl: json['author_url'] as String?,
-      providerName: json['provider_name'] as String?,
-      providerUrl: json['provider_url'] as String?,
-      html: json['html'] as String?,
-      width: (json['width'] as num?)?.toInt(),
-      height: (json['height'] as num?)?.toInt(),
-      image: json['image'] as String?,
-      embedUrl: json['embed_url'] as String?,
-      blurhash: json['blurhash'] as String?,
-      history: (json['history'] as List<dynamic>?)
-          ?.map((e) => TrendsLinkHistory.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      authors: (json['authors'] as List<dynamic>?)
-          ?.map((e) => PreviewCardAuthor.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      publishedAt: json['published_at'] == null
-          ? null
-          : DateTime.parse(json['published_at'] as String),
-    );
+_TrendsLink _$TrendsLinkFromJson(Map<String, dynamic> json) => _TrendsLink(
+  url: json['url'] as String?,
+  title: json['title'] as String?,
+  description: json['description'] as String?,
+  type: $enumDecodeNullable(_$PreviewCardTypeEnumMap, json['type']),
+  authorName: json['author_name'] as String?,
+  authorUrl: json['author_url'] as String?,
+  providerName: json['provider_name'] as String?,
+  providerUrl: json['provider_url'] as String?,
+  html: json['html'] as String?,
+  width: (json['width'] as num?)?.toInt(),
+  height: (json['height'] as num?)?.toInt(),
+  image: json['image'] as String?,
+  embedUrl: json['embed_url'] as String?,
+  blurhash: json['blurhash'] as String?,
+  history: (json['history'] as List<dynamic>?)
+      ?.map((e) => TrendsLinkHistory.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  authors: (json['authors'] as List<dynamic>?)
+      ?.map((e) => PreviewCardAuthor.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  publishedAt: json['published_at'] == null
+      ? null
+      : DateTime.parse(json['published_at'] as String),
+);
 
-Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
+Map<String, dynamic> _$TrendsLinkToJson(_TrendsLink instance) =>
     <String, dynamic>{
       'url': instance.url,
       'title': instance.title,
@@ -105,16 +103,14 @@ Map<String, dynamic> _$$TrendsLinkImplToJson(_$TrendsLinkImpl instance) =>
       'published_at': instance.publishedAt?.toIso8601String(),
     };
 
-_$TrendsLinkHistoryImpl _$$TrendsLinkHistoryImplFromJson(
-        Map<String, dynamic> json) =>
-    _$TrendsLinkHistoryImpl(
+_TrendsLinkHistory _$TrendsLinkHistoryFromJson(Map<String, dynamic> json) =>
+    _TrendsLinkHistory(
       day: json['day'] as String?,
       uses: json['uses'] as String?,
       accounts: json['accounts'] as String?,
     );
 
-Map<String, dynamic> _$$TrendsLinkHistoryImplToJson(
-        _$TrendsLinkHistoryImpl instance) =>
+Map<String, dynamic> _$TrendsLinkHistoryToJson(_TrendsLinkHistory instance) =>
     <String, dynamic>{
       'day': instance.day,
       'uses': instance.uses,

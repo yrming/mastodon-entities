@@ -8,7 +8,7 @@ part 'instance.g.dart';
 
 /// Represents the software instance of Mastodon running on this domain.
 @freezed
-class Instance with _$Instance {
+abstract class Instance with _$Instance {
   const factory Instance({
     /// The domain name of the instance.
     @JsonKey(name: 'domain') final String? domain,
@@ -61,7 +61,7 @@ class Instance with _$Instance {
 }
 
 @freezed
-class InstanceUsage with _$InstanceUsage {
+abstract class InstanceUsage with _$InstanceUsage {
   const factory InstanceUsage({
     /// Usage data related to users on this instance.
     @JsonKey(name: 'users') final InstanceUsageUsers? users,
@@ -72,7 +72,7 @@ class InstanceUsage with _$InstanceUsage {
 }
 
 @freezed
-class InstanceUsageUsers with _$InstanceUsageUsers {
+abstract class InstanceUsageUsers with _$InstanceUsageUsers {
   const factory InstanceUsageUsers({
     /// The number of active users in the past 4 weeks.
     @JsonKey(name: 'active_month') final int? activeMonth,
@@ -83,7 +83,7 @@ class InstanceUsageUsers with _$InstanceUsageUsers {
 }
 
 @freezed
-class InstanceThumbnail with _$InstanceThumbnail {
+abstract class InstanceThumbnail with _$InstanceThumbnail {
   const factory InstanceThumbnail({
     /// The URL for the thumbnail image.
     @JsonKey(name: 'url') final String? url,
@@ -101,7 +101,7 @@ class InstanceThumbnail with _$InstanceThumbnail {
 }
 
 @freezed
-class InstanceVersions with _$InstanceVersions {
+abstract class InstanceVersions with _$InstanceVersions {
   const factory InstanceVersions({
     /// The URL for the thumbnail image at 1x resolution.
     @JsonKey(name: '@1x') final String? x1,
@@ -115,7 +115,7 @@ class InstanceVersions with _$InstanceVersions {
 }
 
 @freezed
-class InstanceIcon with _$InstanceIcon {
+abstract class InstanceIcon with _$InstanceIcon {
   const factory InstanceIcon({
     /// The URL of this icon.
     @JsonKey(name: 'src') final String? src,
@@ -129,7 +129,7 @@ class InstanceIcon with _$InstanceIcon {
 }
 
 @freezed
-class InstanceConfiguration with _$InstanceConfiguration {
+abstract class InstanceConfiguration with _$InstanceConfiguration {
   const factory InstanceConfiguration({
     /// URLs of interest for clients apps.
     @JsonKey(name: 'urls') final InstanceConfigurationUrls? urls,
@@ -161,7 +161,7 @@ class InstanceConfiguration with _$InstanceConfiguration {
 }
 
 @freezed
-class InstanceConfigurationUrls with _$InstanceConfigurationUrls {
+abstract class InstanceConfigurationUrls with _$InstanceConfigurationUrls {
   const factory InstanceConfigurationUrls({
     /// The Websockets URL for connecting to the streaming API.
     @JsonKey(name: 'streaming') final String? streaming,
@@ -172,7 +172,7 @@ class InstanceConfigurationUrls with _$InstanceConfigurationUrls {
 }
 
 @freezed
-class InstanceConfigurationVapid with _$InstanceConfigurationVapid {
+abstract class InstanceConfigurationVapid with _$InstanceConfigurationVapid {
   const factory InstanceConfigurationVapid({
     /// The instances VAPID public key, used for push notifications, the same
     /// as WebPushSubscription.serverkey.
@@ -181,12 +181,12 @@ class InstanceConfigurationVapid with _$InstanceConfigurationVapid {
 
   factory InstanceConfigurationVapid.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$InstanceConfigurationVapidFromJson(json);
+  ) => _$InstanceConfigurationVapidFromJson(json);
 }
 
 @freezed
-class InstanceConfigurationAccounts with _$InstanceConfigurationAccounts {
+abstract class InstanceConfigurationAccounts
+    with _$InstanceConfigurationAccounts {
   const factory InstanceConfigurationAccounts({
     /// The maximum number of featured tags allowed for each account.
     @JsonKey(name: 'max_featured_tags') final int? maxFeaturedTags,
@@ -197,12 +197,12 @@ class InstanceConfigurationAccounts with _$InstanceConfigurationAccounts {
 
   factory InstanceConfigurationAccounts.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$InstanceConfigurationAccountsFromJson(json);
+  ) => _$InstanceConfigurationAccountsFromJson(json);
 }
 
 @freezed
-class InstanceConfigurationStatuses with _$InstanceConfigurationStatuses {
+abstract class InstanceConfigurationStatuses
+    with _$InstanceConfigurationStatuses {
   const factory InstanceConfigurationStatuses({
     /// The maximum number of allowed characters per status.
     @JsonKey(name: 'max_characters') final int? maxCharacters,
@@ -217,12 +217,11 @@ class InstanceConfigurationStatuses with _$InstanceConfigurationStatuses {
 
   factory InstanceConfigurationStatuses.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$InstanceConfigurationStatusesFromJson(json);
+  ) => _$InstanceConfigurationStatusesFromJson(json);
 }
 
 @freezed
-class InstanceConfigurationMediaAttachments
+abstract class InstanceConfigurationMediaAttachments
     with _$InstanceConfigurationMediaAttachments {
   const factory InstanceConfigurationMediaAttachments({
     /// Contains MIME types that can be uploaded.
@@ -250,12 +249,11 @@ class InstanceConfigurationMediaAttachments
 
   factory InstanceConfigurationMediaAttachments.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$InstanceConfigurationMediaAttachmentsFromJson(json);
+  ) => _$InstanceConfigurationMediaAttachmentsFromJson(json);
 }
 
 @freezed
-class InstanceConfigurationPolls with _$InstanceConfigurationPolls {
+abstract class InstanceConfigurationPolls with _$InstanceConfigurationPolls {
   const factory InstanceConfigurationPolls({
     /// Each poll is allowed to have up to this many options.
     @JsonKey(name: 'max_options') final int? maxOptions,
@@ -273,12 +271,12 @@ class InstanceConfigurationPolls with _$InstanceConfigurationPolls {
 
   factory InstanceConfigurationPolls.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$InstanceConfigurationPollsFromJson(json);
+  ) => _$InstanceConfigurationPollsFromJson(json);
 }
 
 @freezed
-class InstanceConfigurationTranslation with _$InstanceConfigurationTranslation {
+abstract class InstanceConfigurationTranslation
+    with _$InstanceConfigurationTranslation {
   const factory InstanceConfigurationTranslation({
     /// Whether the Translations API is available on this instance.
     @JsonKey(name: 'enabled') final bool? enabled,
@@ -286,12 +284,11 @@ class InstanceConfigurationTranslation with _$InstanceConfigurationTranslation {
 
   factory InstanceConfigurationTranslation.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$InstanceConfigurationTranslationFromJson(json);
+  ) => _$InstanceConfigurationTranslationFromJson(json);
 }
 
 @freezed
-class InstanceRegistrations with _$InstanceRegistrations {
+abstract class InstanceRegistrations with _$InstanceRegistrations {
   const factory InstanceRegistrations({
     /// Whether registrations are enabled.
     @JsonKey(name: 'enabled') final bool? enabled,
@@ -308,7 +305,7 @@ class InstanceRegistrations with _$InstanceRegistrations {
 }
 
 @freezed
-class InstanceApiVersion with _$InstanceApiVersion {
+abstract class InstanceApiVersion with _$InstanceApiVersion {
   const factory InstanceApiVersion({
     /// API version number that this server implements. Starting from Mastodon
     /// v4.3.0, API changes will come with a version number, which clients can
@@ -321,7 +318,7 @@ class InstanceApiVersion with _$InstanceApiVersion {
 }
 
 @freezed
-class InstanceContact with _$InstanceContact {
+abstract class InstanceContact with _$InstanceContact {
   const factory InstanceContact({
     /// An email address that can be messaged regarding inquiries or issues.
     @JsonKey(name: 'email') final String? email,

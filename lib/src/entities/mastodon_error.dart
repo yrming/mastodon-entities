@@ -5,7 +5,7 @@ part 'mastodon_error.g.dart';
 
 /// Represents an error message.
 @freezed
-class MastodonError with _$MastodonError {
+abstract class MastodonError with _$MastodonError {
   const factory MastodonError({
     /// The error message.
     @JsonKey(name: 'error') final String? error,

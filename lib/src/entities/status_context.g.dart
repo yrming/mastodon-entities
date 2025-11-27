@@ -6,8 +6,8 @@ part of 'status_context.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StatusContextImpl _$$StatusContextImplFromJson(Map<String, dynamic> json) =>
-    _$StatusContextImpl(
+_StatusContext _$StatusContextFromJson(Map<String, dynamic> json) =>
+    _StatusContext(
       ancestors: (json['ancestors'] as List<dynamic>?)
           ?.map((e) => Status.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -16,7 +16,7 @@ _$StatusContextImpl _$$StatusContextImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$StatusContextImplToJson(_$StatusContextImpl instance) =>
+Map<String, dynamic> _$StatusContextToJson(_StatusContext instance) =>
     <String, dynamic>{
       'ancestors': instance.ancestors,
       'descendants': instance.descendants,

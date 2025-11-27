@@ -12,7 +12,7 @@ part 'notification.g.dart';
 
 /// Represents a notification of an event relevant to the user.
 @freezed
-class Notification with _$Notification {
+abstract class Notification with _$Notification {
   const factory Notification({
     /// The id of the notification in the database.
     @JsonKey(name: 'id') final String? id,

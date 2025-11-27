@@ -6,11 +6,13 @@ part of 'account_warning.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AccountWarningImpl _$$AccountWarningImplFromJson(Map<String, dynamic> json) =>
-    _$AccountWarningImpl(
+_AccountWarning _$AccountWarningFromJson(Map<String, dynamic> json) =>
+    _AccountWarning(
       id: json['id'] as String?,
-      action:
-          $enumDecodeNullable(_$AccountWarningActionEnumMap, json['action']),
+      action: $enumDecodeNullable(
+        _$AccountWarningActionEnumMap,
+        json['action'],
+      ),
       text: json['text'] as String?,
       statusIds: (json['status_ids'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -26,8 +28,7 @@ _$AccountWarningImpl _$$AccountWarningImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['created_at'] as String),
     );
 
-Map<String, dynamic> _$$AccountWarningImplToJson(
-        _$AccountWarningImpl instance) =>
+Map<String, dynamic> _$AccountWarningToJson(_AccountWarning instance) =>
     <String, dynamic>{
       'id': instance.id,
       'action': _$AccountWarningActionEnumMap[instance.action],

@@ -5,7 +5,7 @@ part 'admin_domain_allow.g.dart';
 
 /// Represents a domain allowed to federate.
 @freezed
-class AdminDomainAllow with _$AdminDomainAllow {
+abstract class AdminDomainAllow with _$AdminDomainAllow {
   const factory AdminDomainAllow({
     /// The ID of the DomainAllow in the database.
     @JsonKey(name: 'id') final String? id,

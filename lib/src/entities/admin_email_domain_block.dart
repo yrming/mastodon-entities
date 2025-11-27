@@ -5,7 +5,7 @@ part 'admin_email_domain_block.g.dart';
 
 /// Represents an email domain that cannot be used to sign up.
 @freezed
-class AdminEmailDomainBlock with _$AdminEmailDomainBlock {
+abstract class AdminEmailDomainBlock with _$AdminEmailDomainBlock {
   const factory AdminEmailDomainBlock({
     /// The ID of the EmailDomainBlock in the database.
     @JsonKey(name: 'id') final String? id,
@@ -25,7 +25,8 @@ class AdminEmailDomainBlock with _$AdminEmailDomainBlock {
 }
 
 @freezed
-class AdminEmailDomainBlockHistory with _$AdminEmailDomainBlockHistory {
+abstract class AdminEmailDomainBlockHistory
+    with _$AdminEmailDomainBlockHistory {
   const factory AdminEmailDomainBlockHistory({
     /// UNIX timestamp on midnight of the given day.
     @JsonKey(name: 'day') final String? day,
@@ -40,6 +41,5 @@ class AdminEmailDomainBlockHistory with _$AdminEmailDomainBlockHistory {
 
   factory AdminEmailDomainBlockHistory.fromJson(
     final Map<String, dynamic> json,
-  ) =>
-      _$AdminEmailDomainBlockHistoryFromJson(json);
+  ) => _$AdminEmailDomainBlockHistoryFromJson(json);
 }

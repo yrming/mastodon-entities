@@ -6,13 +6,13 @@ part of 'mastodon_error.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MastodonErrorImpl _$$MastodonErrorImplFromJson(Map<String, dynamic> json) =>
-    _$MastodonErrorImpl(
+_MastodonError _$MastodonErrorFromJson(Map<String, dynamic> json) =>
+    _MastodonError(
       error: json['error'] as String?,
       errorDescription: json['error_description'] as String?,
     );
 
-Map<String, dynamic> _$$MastodonErrorImplToJson(_$MastodonErrorImpl instance) =>
+Map<String, dynamic> _$MastodonErrorToJson(_MastodonError instance) =>
     <String, dynamic>{
       'error': instance.error,
       'error_description': instance.errorDescription,

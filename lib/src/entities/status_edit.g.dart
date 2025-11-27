@@ -6,29 +6,28 @@ part of 'status_edit.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StatusEditImpl _$$StatusEditImplFromJson(Map<String, dynamic> json) =>
-    _$StatusEditImpl(
-      content: json['content'] as String?,
-      spoilerText: json['spoiler_text'] as String?,
-      sensitive: json['sensitive'] as bool?,
-      createdAt: json['created_at'] == null
-          ? null
-          : DateTime.parse(json['created_at'] as String),
-      account: json['account'] == null
-          ? null
-          : Account.fromJson(json['account'] as Map<String, dynamic>),
-      poll: json['poll'] == null
-          ? null
-          : StatusEditPoll.fromJson(json['poll'] as Map<String, dynamic>),
-      mediaAttachments: (json['media_attachments'] as List<dynamic>?)
-          ?.map((e) => MediaAttachment.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      emojis: (json['emojis'] as List<dynamic>?)
-          ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_StatusEdit _$StatusEditFromJson(Map<String, dynamic> json) => _StatusEdit(
+  content: json['content'] as String?,
+  spoilerText: json['spoiler_text'] as String?,
+  sensitive: json['sensitive'] as bool?,
+  createdAt: json['created_at'] == null
+      ? null
+      : DateTime.parse(json['created_at'] as String),
+  account: json['account'] == null
+      ? null
+      : Account.fromJson(json['account'] as Map<String, dynamic>),
+  poll: json['poll'] == null
+      ? null
+      : StatusEditPoll.fromJson(json['poll'] as Map<String, dynamic>),
+  mediaAttachments: (json['media_attachments'] as List<dynamic>?)
+      ?.map((e) => MediaAttachment.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  emojis: (json['emojis'] as List<dynamic>?)
+      ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
+      .toList(),
+);
 
-Map<String, dynamic> _$$StatusEditImplToJson(_$StatusEditImpl instance) =>
+Map<String, dynamic> _$StatusEditToJson(_StatusEdit instance) =>
     <String, dynamic>{
       'content': instance.content,
       'spoiler_text': instance.spoilerText,
@@ -40,27 +39,20 @@ Map<String, dynamic> _$$StatusEditImplToJson(_$StatusEditImpl instance) =>
       'emojis': instance.emojis,
     };
 
-_$StatusEditPollImpl _$$StatusEditPollImplFromJson(Map<String, dynamic> json) =>
-    _$StatusEditPollImpl(
+_StatusEditPoll _$StatusEditPollFromJson(Map<String, dynamic> json) =>
+    _StatusEditPoll(
       options: (json['options'] as List<dynamic>?)
           ?.map((e) => StatusEditPollOption.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$StatusEditPollImplToJson(
-        _$StatusEditPollImpl instance) =>
-    <String, dynamic>{
-      'options': instance.options,
-    };
+Map<String, dynamic> _$StatusEditPollToJson(_StatusEditPoll instance) =>
+    <String, dynamic>{'options': instance.options};
 
-_$StatusEditPollOptionImpl _$$StatusEditPollOptionImplFromJson(
-        Map<String, dynamic> json) =>
-    _$StatusEditPollOptionImpl(
-      title: json['title'] as String?,
-    );
+_StatusEditPollOption _$StatusEditPollOptionFromJson(
+  Map<String, dynamic> json,
+) => _StatusEditPollOption(title: json['title'] as String?);
 
-Map<String, dynamic> _$$StatusEditPollOptionImplToJson(
-        _$StatusEditPollOptionImpl instance) =>
-    <String, dynamic>{
-      'title': instance.title,
-    };
+Map<String, dynamic> _$StatusEditPollOptionToJson(
+  _StatusEditPollOption instance,
+) => <String, dynamic>{'title': instance.title};

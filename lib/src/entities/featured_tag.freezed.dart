@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,286 +9,291 @@ part of 'featured_tag.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-FeaturedTag _$FeaturedTagFromJson(Map<String, dynamic> json) {
-  return _FeaturedTag.fromJson(json);
-}
 
 /// @nodoc
 mixin _$FeaturedTag {
-  /// The internal ID of the featured tag in the database.
-  @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
 
-  /// The name of the hashtag being featured.
-  @JsonKey(name: 'name')
-  String? get name => throw _privateConstructorUsedError;
-
-  /// A link to all statuses by a user that contain this hashtag.
-  @JsonKey(name: 'url')
-  String? get url => throw _privateConstructorUsedError;
-
-  /// The number of authored statuses containing this hashtag.
-  @JsonKey(name: 'statuses_count')
-  String? get statusesCount => throw _privateConstructorUsedError;
-
-  /// The date of the last authored status containing this hashtag.
-  @JsonKey(name: 'last_status_at')
-  DateTime? get lastStatusAt => throw _privateConstructorUsedError;
+/// The internal ID of the featured tag in the database.
+@JsonKey(name: 'id') String? get id;/// The name of the hashtag being featured.
+@JsonKey(name: 'name') String? get name;/// A link to all statuses by a user that contain this hashtag.
+@JsonKey(name: 'url') String? get url;/// The number of authored statuses containing this hashtag.
+@JsonKey(name: 'statuses_count') String? get statusesCount;/// The date of the last authored status containing this hashtag.
+@JsonKey(name: 'last_status_at') DateTime? get lastStatusAt;
+/// Create a copy of FeaturedTag
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$FeaturedTagCopyWith<FeaturedTag> get copyWith => _$FeaturedTagCopyWithImpl<FeaturedTag>(this as FeaturedTag, _$identity);
 
   /// Serializes this FeaturedTag to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of FeaturedTag
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $FeaturedTagCopyWith<FeaturedTag> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FeaturedTag&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.url, url) || other.url == url)&&(identical(other.statusesCount, statusesCount) || other.statusesCount == statusesCount)&&(identical(other.lastStatusAt, lastStatusAt) || other.lastStatusAt == lastStatusAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,url,statusesCount,lastStatusAt);
+
+@override
+String toString() {
+  return 'FeaturedTag(id: $id, name: $name, url: $url, statusesCount: $statusesCount, lastStatusAt: $lastStatusAt)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $FeaturedTagCopyWith<$Res> {
-  factory $FeaturedTagCopyWith(
-          FeaturedTag value, $Res Function(FeaturedTag) then) =
-      _$FeaturedTagCopyWithImpl<$Res, FeaturedTag>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'url') String? url,
-      @JsonKey(name: 'statuses_count') String? statusesCount,
-      @JsonKey(name: 'last_status_at') DateTime? lastStatusAt});
-}
+abstract mixin class $FeaturedTagCopyWith<$Res>  {
+  factory $FeaturedTagCopyWith(FeaturedTag value, $Res Function(FeaturedTag) _then) = _$FeaturedTagCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'id') String? id,@JsonKey(name: 'name') String? name,@JsonKey(name: 'url') String? url,@JsonKey(name: 'statuses_count') String? statusesCount,@JsonKey(name: 'last_status_at') DateTime? lastStatusAt
+});
 
+
+
+
+}
 /// @nodoc
-class _$FeaturedTagCopyWithImpl<$Res, $Val extends FeaturedTag>
+class _$FeaturedTagCopyWithImpl<$Res>
     implements $FeaturedTagCopyWith<$Res> {
-  _$FeaturedTagCopyWithImpl(this._value, this._then);
+  _$FeaturedTagCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final FeaturedTag _self;
+  final $Res Function(FeaturedTag) _then;
 
-  /// Create a copy of FeaturedTag
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? url = freezed,
-    Object? statusesCount = freezed,
-    Object? lastStatusAt = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      statusesCount: freezed == statusesCount
-          ? _value.statusesCount
-          : statusesCount // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastStatusAt: freezed == lastStatusAt
-          ? _value.lastStatusAt
-          : lastStatusAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
-  }
+/// Create a copy of FeaturedTag
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? name = freezed,Object? url = freezed,Object? statusesCount = freezed,Object? lastStatusAt = freezed,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String?,statusesCount: freezed == statusesCount ? _self.statusesCount : statusesCount // ignore: cast_nullable_to_non_nullable
+as String?,lastStatusAt: freezed == lastStatusAt ? _self.lastStatusAt : lastStatusAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$FeaturedTagImplCopyWith<$Res>
-    implements $FeaturedTagCopyWith<$Res> {
-  factory _$$FeaturedTagImplCopyWith(
-          _$FeaturedTagImpl value, $Res Function(_$FeaturedTagImpl) then) =
-      __$$FeaturedTagImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'url') String? url,
-      @JsonKey(name: 'statuses_count') String? statusesCount,
-      @JsonKey(name: 'last_status_at') DateTime? lastStatusAt});
 }
 
-/// @nodoc
-class __$$FeaturedTagImplCopyWithImpl<$Res>
-    extends _$FeaturedTagCopyWithImpl<$Res, _$FeaturedTagImpl>
-    implements _$$FeaturedTagImplCopyWith<$Res> {
-  __$$FeaturedTagImplCopyWithImpl(
-      _$FeaturedTagImpl _value, $Res Function(_$FeaturedTagImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of FeaturedTag
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? url = freezed,
-    Object? statusesCount = freezed,
-    Object? lastStatusAt = freezed,
-  }) {
-    return _then(_$FeaturedTagImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      statusesCount: freezed == statusesCount
-          ? _value.statusesCount
-          : statusesCount // ignore: cast_nullable_to_non_nullable
-              as String?,
-      lastStatusAt: freezed == lastStatusAt
-          ? _value.lastStatusAt
-          : lastStatusAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [FeaturedTag].
+extension FeaturedTagPatterns on FeaturedTag {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _FeaturedTag value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _FeaturedTag() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _FeaturedTag value)  $default,){
+final _that = this;
+switch (_that) {
+case _FeaturedTag():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _FeaturedTag value)?  $default,){
+final _that = this;
+switch (_that) {
+case _FeaturedTag() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String? id, @JsonKey(name: 'name')  String? name, @JsonKey(name: 'url')  String? url, @JsonKey(name: 'statuses_count')  String? statusesCount, @JsonKey(name: 'last_status_at')  DateTime? lastStatusAt)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _FeaturedTag() when $default != null:
+return $default(_that.id,_that.name,_that.url,_that.statusesCount,_that.lastStatusAt);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String? id, @JsonKey(name: 'name')  String? name, @JsonKey(name: 'url')  String? url, @JsonKey(name: 'statuses_count')  String? statusesCount, @JsonKey(name: 'last_status_at')  DateTime? lastStatusAt)  $default,) {final _that = this;
+switch (_that) {
+case _FeaturedTag():
+return $default(_that.id,_that.name,_that.url,_that.statusesCount,_that.lastStatusAt);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'id')  String? id, @JsonKey(name: 'name')  String? name, @JsonKey(name: 'url')  String? url, @JsonKey(name: 'statuses_count')  String? statusesCount, @JsonKey(name: 'last_status_at')  DateTime? lastStatusAt)?  $default,) {final _that = this;
+switch (_that) {
+case _FeaturedTag() when $default != null:
+return $default(_that.id,_that.name,_that.url,_that.statusesCount,_that.lastStatusAt);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$FeaturedTagImpl implements _FeaturedTag {
-  const _$FeaturedTagImpl(
-      {@JsonKey(name: 'id') this.id,
-      @JsonKey(name: 'name') this.name,
-      @JsonKey(name: 'url') this.url,
-      @JsonKey(name: 'statuses_count') this.statusesCount,
-      @JsonKey(name: 'last_status_at') this.lastStatusAt});
 
-  factory _$FeaturedTagImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FeaturedTagImplFromJson(json);
+class _FeaturedTag implements FeaturedTag {
+  const _FeaturedTag({@JsonKey(name: 'id') this.id, @JsonKey(name: 'name') this.name, @JsonKey(name: 'url') this.url, @JsonKey(name: 'statuses_count') this.statusesCount, @JsonKey(name: 'last_status_at') this.lastStatusAt});
+  factory _FeaturedTag.fromJson(Map<String, dynamic> json) => _$FeaturedTagFromJson(json);
 
-  /// The internal ID of the featured tag in the database.
-  @override
-  @JsonKey(name: 'id')
-  final String? id;
+/// The internal ID of the featured tag in the database.
+@override@JsonKey(name: 'id') final  String? id;
+/// The name of the hashtag being featured.
+@override@JsonKey(name: 'name') final  String? name;
+/// A link to all statuses by a user that contain this hashtag.
+@override@JsonKey(name: 'url') final  String? url;
+/// The number of authored statuses containing this hashtag.
+@override@JsonKey(name: 'statuses_count') final  String? statusesCount;
+/// The date of the last authored status containing this hashtag.
+@override@JsonKey(name: 'last_status_at') final  DateTime? lastStatusAt;
 
-  /// The name of the hashtag being featured.
-  @override
-  @JsonKey(name: 'name')
-  final String? name;
+/// Create a copy of FeaturedTag
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$FeaturedTagCopyWith<_FeaturedTag> get copyWith => __$FeaturedTagCopyWithImpl<_FeaturedTag>(this, _$identity);
 
-  /// A link to all statuses by a user that contain this hashtag.
-  @override
-  @JsonKey(name: 'url')
-  final String? url;
-
-  /// The number of authored statuses containing this hashtag.
-  @override
-  @JsonKey(name: 'statuses_count')
-  final String? statusesCount;
-
-  /// The date of the last authored status containing this hashtag.
-  @override
-  @JsonKey(name: 'last_status_at')
-  final DateTime? lastStatusAt;
-
-  @override
-  String toString() {
-    return 'FeaturedTag(id: $id, name: $name, url: $url, statusesCount: $statusesCount, lastStatusAt: $lastStatusAt)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FeaturedTagImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.statusesCount, statusesCount) ||
-                other.statusesCount == statusesCount) &&
-            (identical(other.lastStatusAt, lastStatusAt) ||
-                other.lastStatusAt == lastStatusAt));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, url, statusesCount, lastStatusAt);
-
-  /// Create a copy of FeaturedTag
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FeaturedTagImplCopyWith<_$FeaturedTagImpl> get copyWith =>
-      __$$FeaturedTagImplCopyWithImpl<_$FeaturedTagImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FeaturedTagImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$FeaturedTagToJson(this, );
 }
 
-abstract class _FeaturedTag implements FeaturedTag {
-  const factory _FeaturedTag(
-          {@JsonKey(name: 'id') final String? id,
-          @JsonKey(name: 'name') final String? name,
-          @JsonKey(name: 'url') final String? url,
-          @JsonKey(name: 'statuses_count') final String? statusesCount,
-          @JsonKey(name: 'last_status_at') final DateTime? lastStatusAt}) =
-      _$FeaturedTagImpl;
-
-  factory _FeaturedTag.fromJson(Map<String, dynamic> json) =
-      _$FeaturedTagImpl.fromJson;
-
-  /// The internal ID of the featured tag in the database.
-  @override
-  @JsonKey(name: 'id')
-  String? get id;
-
-  /// The name of the hashtag being featured.
-  @override
-  @JsonKey(name: 'name')
-  String? get name;
-
-  /// A link to all statuses by a user that contain this hashtag.
-  @override
-  @JsonKey(name: 'url')
-  String? get url;
-
-  /// The number of authored statuses containing this hashtag.
-  @override
-  @JsonKey(name: 'statuses_count')
-  String? get statusesCount;
-
-  /// The date of the last authored status containing this hashtag.
-  @override
-  @JsonKey(name: 'last_status_at')
-  DateTime? get lastStatusAt;
-
-  /// Create a copy of FeaturedTag
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FeaturedTagImplCopyWith<_$FeaturedTagImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FeaturedTag&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.url, url) || other.url == url)&&(identical(other.statusesCount, statusesCount) || other.statusesCount == statusesCount)&&(identical(other.lastStatusAt, lastStatusAt) || other.lastStatusAt == lastStatusAt));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,name,url,statusesCount,lastStatusAt);
+
+@override
+String toString() {
+  return 'FeaturedTag(id: $id, name: $name, url: $url, statusesCount: $statusesCount, lastStatusAt: $lastStatusAt)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$FeaturedTagCopyWith<$Res> implements $FeaturedTagCopyWith<$Res> {
+  factory _$FeaturedTagCopyWith(_FeaturedTag value, $Res Function(_FeaturedTag) _then) = __$FeaturedTagCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'id') String? id,@JsonKey(name: 'name') String? name,@JsonKey(name: 'url') String? url,@JsonKey(name: 'statuses_count') String? statusesCount,@JsonKey(name: 'last_status_at') DateTime? lastStatusAt
+});
+
+
+
+
+}
+/// @nodoc
+class __$FeaturedTagCopyWithImpl<$Res>
+    implements _$FeaturedTagCopyWith<$Res> {
+  __$FeaturedTagCopyWithImpl(this._self, this._then);
+
+  final _FeaturedTag _self;
+  final $Res Function(_FeaturedTag) _then;
+
+/// Create a copy of FeaturedTag
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? name = freezed,Object? url = freezed,Object? statusesCount = freezed,Object? lastStatusAt = freezed,}) {
+  return _then(_FeaturedTag(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,url: freezed == url ? _self.url : url // ignore: cast_nullable_to_non_nullable
+as String?,statusesCount: freezed == statusesCount ? _self.statusesCount : statusesCount // ignore: cast_nullable_to_non_nullable
+as String?,lastStatusAt: freezed == lastStatusAt ? _self.lastStatusAt : lastStatusAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,
+  ));
+}
+
+
+}
+
+// dart format on

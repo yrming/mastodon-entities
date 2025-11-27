@@ -6,8 +6,8 @@ part of 'announcement.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AnnouncementImpl _$$AnnouncementImplFromJson(Map<String, dynamic> json) =>
-    _$AnnouncementImpl(
+_Announcement _$AnnouncementFromJson(Map<String, dynamic> json) =>
+    _Announcement(
       id: json['id'] as String?,
       content: json['content'] as String?,
       startsAt: json['starts_at'] == null
@@ -42,7 +42,7 @@ _$AnnouncementImpl _$$AnnouncementImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$AnnouncementImplToJson(_$AnnouncementImpl instance) =>
+Map<String, dynamic> _$AnnouncementToJson(_Announcement instance) =>
     <String, dynamic>{
       'id': instance.id,
       'content': instance.content,
@@ -60,34 +60,25 @@ Map<String, dynamic> _$$AnnouncementImplToJson(_$AnnouncementImpl instance) =>
       'reactions': instance.reactions,
     };
 
-_$AnnouncementAccountImpl _$$AnnouncementAccountImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AnnouncementAccountImpl(
+_AnnouncementAccount _$AnnouncementAccountFromJson(Map<String, dynamic> json) =>
+    _AnnouncementAccount(
       id: json['id'] as String?,
       username: json['username'] as String?,
       url: json['url'] as String?,
       acct: json['acct'] as String?,
     );
 
-Map<String, dynamic> _$$AnnouncementAccountImplToJson(
-        _$AnnouncementAccountImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'username': instance.username,
-      'url': instance.url,
-      'acct': instance.acct,
-    };
+Map<String, dynamic> _$AnnouncementAccountToJson(
+  _AnnouncementAccount instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'username': instance.username,
+  'url': instance.url,
+  'acct': instance.acct,
+};
 
-_$AnnouncementStatusImpl _$$AnnouncementStatusImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AnnouncementStatusImpl(
-      id: json['id'] as String?,
-      url: json['url'] as String?,
-    );
+_AnnouncementStatus _$AnnouncementStatusFromJson(Map<String, dynamic> json) =>
+    _AnnouncementStatus(id: json['id'] as String?, url: json['url'] as String?);
 
-Map<String, dynamic> _$$AnnouncementStatusImplToJson(
-        _$AnnouncementStatusImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'url': instance.url,
-    };
+Map<String, dynamic> _$AnnouncementStatusToJson(_AnnouncementStatus instance) =>
+    <String, dynamic>{'id': instance.id, 'url': instance.url};

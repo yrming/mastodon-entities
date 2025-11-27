@@ -6,9 +6,8 @@ part of 'notification_policy.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotificationPolicyImpl _$$NotificationPolicyImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NotificationPolicyImpl(
+_NotificationPolicy _$NotificationPolicyFromJson(Map<String, dynamic> json) =>
+    _NotificationPolicy(
       filterNotFollowing: json['filter_not_following'] as bool?,
       filterNotFollowers: json['filter_not_followers'] as bool?,
       filterNewAccounts: json['filter_new_accounts'] as bool?,
@@ -16,11 +15,11 @@ _$NotificationPolicyImpl _$$NotificationPolicyImplFromJson(
       summary: json['summary'] == null
           ? null
           : NotificationPolicySummary.fromJson(
-              json['summary'] as Map<String, dynamic>),
+              json['summary'] as Map<String, dynamic>,
+            ),
     );
 
-Map<String, dynamic> _$$NotificationPolicyImplToJson(
-        _$NotificationPolicyImpl instance) =>
+Map<String, dynamic> _$NotificationPolicyToJson(_NotificationPolicy instance) =>
     <String, dynamic>{
       'filter_not_following': instance.filterNotFollowing,
       'filter_not_followers': instance.filterNotFollowers,
@@ -29,17 +28,17 @@ Map<String, dynamic> _$$NotificationPolicyImplToJson(
       'summary': instance.summary,
     };
 
-_$NotificationPolicySummaryImpl _$$NotificationPolicySummaryImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NotificationPolicySummaryImpl(
-      pendingRequestsCount: (json['pending_requests_count'] as num?)?.toInt(),
-      pendingNotificationsCount:
-          (json['pending_notifications_count'] as num?)?.toInt(),
-    );
+_NotificationPolicySummary _$NotificationPolicySummaryFromJson(
+  Map<String, dynamic> json,
+) => _NotificationPolicySummary(
+  pendingRequestsCount: (json['pending_requests_count'] as num?)?.toInt(),
+  pendingNotificationsCount: (json['pending_notifications_count'] as num?)
+      ?.toInt(),
+);
 
-Map<String, dynamic> _$$NotificationPolicySummaryImplToJson(
-        _$NotificationPolicySummaryImpl instance) =>
-    <String, dynamic>{
-      'pending_requests_count': instance.pendingRequestsCount,
-      'pending_notifications_count': instance.pendingNotificationsCount,
-    };
+Map<String, dynamic> _$NotificationPolicySummaryToJson(
+  _NotificationPolicySummary instance,
+) => <String, dynamic>{
+  'pending_requests_count': instance.pendingRequestsCount,
+  'pending_notifications_count': instance.pendingNotificationsCount,
+};

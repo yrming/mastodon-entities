@@ -5,7 +5,7 @@ part 'admin_dimension.g.dart';
 
 /// Represents qualitative data about the server.
 @freezed
-class AdminDimension with _$AdminDimension {
+abstract class AdminDimension with _$AdminDimension {
   const factory AdminDimension({
     /// The unique keystring for the requested dimension.
     @JsonKey(name: 'key') final String? key,
@@ -19,7 +19,7 @@ class AdminDimension with _$AdminDimension {
 }
 
 @freezed
-class AdminDimensionData with _$AdminDimensionData {
+abstract class AdminDimensionData with _$AdminDimensionData {
   const factory AdminDimensionData({
     /// The unique keystring for this data item.
     @JsonKey(name: 'key') final String? key,

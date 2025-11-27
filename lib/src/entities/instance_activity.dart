@@ -5,7 +5,7 @@ part 'instance_activity.g.dart';
 
 /// Represents the instance activity
 @freezed
-class InstanceActivity with _$InstanceActivity {
+abstract class InstanceActivity with _$InstanceActivity {
   const factory InstanceActivity({
     /// Midnight at the first day of the week.
     final String? week,

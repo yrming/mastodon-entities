@@ -6,8 +6,8 @@ part of 'filter_result.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FilterResultImpl _$$FilterResultImplFromJson(Map<String, dynamic> json) =>
-    _$FilterResultImpl(
+_FilterResult _$FilterResultFromJson(Map<String, dynamic> json) =>
+    _FilterResult(
       filter: json['filter'] == null
           ? null
           : Filter.fromJson(json['filter'] as Map<String, dynamic>),
@@ -19,7 +19,7 @@ _$FilterResultImpl _$$FilterResultImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$FilterResultImplToJson(_$FilterResultImpl instance) =>
+Map<String, dynamic> _$FilterResultToJson(_FilterResult instance) =>
     <String, dynamic>{
       'filter': instance.filter,
       'keyword_matches': instance.keywordMatches,

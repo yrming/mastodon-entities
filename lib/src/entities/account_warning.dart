@@ -9,7 +9,7 @@ part 'account_warning.g.dart';
 
 /// Moderation warning against a particular account.
 @freezed
-class AccountWarning with _$AccountWarning {
+abstract class AccountWarning with _$AccountWarning {
   const factory AccountWarning({
     /// The ID of the account warning in the database.
     @JsonKey(name: 'id') final String? id,

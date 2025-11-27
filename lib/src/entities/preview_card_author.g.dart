@@ -6,9 +6,8 @@ part of 'preview_card_author.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PreviewCardAuthorImpl _$$PreviewCardAuthorImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PreviewCardAuthorImpl(
+_PreviewCardAuthor _$PreviewCardAuthorFromJson(Map<String, dynamic> json) =>
+    _PreviewCardAuthor(
       name: json['name'] as String?,
       url: json['url'] as String?,
       account: json['account'] == null
@@ -16,8 +15,7 @@ _$PreviewCardAuthorImpl _$$PreviewCardAuthorImplFromJson(
           : Account.fromJson(json['account'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$PreviewCardAuthorImplToJson(
-        _$PreviewCardAuthorImpl instance) =>
+Map<String, dynamic> _$PreviewCardAuthorToJson(_PreviewCardAuthor instance) =>
     <String, dynamic>{
       'name': instance.name,
       'url': instance.url,

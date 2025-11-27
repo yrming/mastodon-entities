@@ -6,15 +6,14 @@ part of 'media_attribute.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MediaAttributeImpl _$$MediaAttributeImplFromJson(Map<String, dynamic> json) =>
-    _$MediaAttributeImpl(
+_MediaAttribute _$MediaAttributeFromJson(Map<String, dynamic> json) =>
+    _MediaAttribute(
       id: json['id'] as String?,
       description: json['description'] as String?,
       focus: json['focus'] as String?,
     );
 
-Map<String, dynamic> _$$MediaAttributeImplToJson(
-        _$MediaAttributeImpl instance) =>
+Map<String, dynamic> _$MediaAttributeToJson(_MediaAttribute instance) =>
     <String, dynamic>{
       'id': instance.id,
       'description': instance.description,

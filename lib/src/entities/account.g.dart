@@ -6,96 +6,94 @@ part of 'account.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
-    _$AccountImpl(
-      id: json['id'] as String?,
-      username: json['username'] as String?,
-      acct: json['acct'] as String?,
-      url: json['url'] as String?,
-      displayName: json['display_name'] as String?,
-      note: json['note'] as String?,
-      avatar: json['avatar'] as String?,
-      avatarStatic: json['avatar_static'] as String?,
-      header: json['header'] as String?,
-      headerStatic: json['header_static'] as String?,
-      locked: json['locked'] as bool?,
-      fields: (json['fields'] as List<dynamic>?)
-          ?.map((e) => AccountField.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      emojis: (json['emojis'] as List<dynamic>?)
-          ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      bot: json['bot'] as bool?,
-      group: json['group'] as bool?,
-      discoverable: json['discoverable'] as bool?,
-      noindex: json['noindex'] as bool?,
-      moved: json['moved'] == null
-          ? null
-          : Account.fromJson(json['moved'] as Map<String, dynamic>),
-      suspended: json['suspended'] as bool?,
-      limited: json['limited'] as bool?,
-      createdAt: json['created_at'] == null
-          ? null
-          : DateTime.parse(json['created_at'] as String),
-      attributionDomains: (json['attribution_domains'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      lastStatusAt: json['last_status_at'] == null
-          ? null
-          : DateTime.parse(json['last_status_at'] as String),
-      statusesCount: (json['statuses_count'] as num?)?.toInt(),
-      followersCount: (json['followers_count'] as num?)?.toInt(),
-      followingCount: (json['following_count'] as num?)?.toInt(),
-      source: json['source'] == null
-          ? null
-          : AccountSource.fromJson(json['source'] as Map<String, dynamic>),
-      role: json['role'] == null
-          ? null
-          : Role.fromJson(json['role'] as Map<String, dynamic>),
-      roles: (json['roles'] as List<dynamic>?)
-          ?.map((e) => Role.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      muteExpiresAt: json['mute_expires_at'] == null
-          ? null
-          : DateTime.parse(json['mute_expires_at'] as String),
-    );
+_Account _$AccountFromJson(Map<String, dynamic> json) => _Account(
+  id: json['id'] as String?,
+  username: json['username'] as String?,
+  acct: json['acct'] as String?,
+  url: json['url'] as String?,
+  displayName: json['display_name'] as String?,
+  note: json['note'] as String?,
+  avatar: json['avatar'] as String?,
+  avatarStatic: json['avatar_static'] as String?,
+  header: json['header'] as String?,
+  headerStatic: json['header_static'] as String?,
+  locked: json['locked'] as bool?,
+  fields: (json['fields'] as List<dynamic>?)
+      ?.map((e) => AccountField.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  emojis: (json['emojis'] as List<dynamic>?)
+      ?.map((e) => CustomEmoji.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  bot: json['bot'] as bool?,
+  group: json['group'] as bool?,
+  discoverable: json['discoverable'] as bool?,
+  noindex: json['noindex'] as bool?,
+  moved: json['moved'] == null
+      ? null
+      : Account.fromJson(json['moved'] as Map<String, dynamic>),
+  suspended: json['suspended'] as bool?,
+  limited: json['limited'] as bool?,
+  createdAt: json['created_at'] == null
+      ? null
+      : DateTime.parse(json['created_at'] as String),
+  attributionDomains: (json['attribution_domains'] as List<dynamic>?)
+      ?.map((e) => e as String)
+      .toList(),
+  lastStatusAt: json['last_status_at'] == null
+      ? null
+      : DateTime.parse(json['last_status_at'] as String),
+  statusesCount: (json['statuses_count'] as num?)?.toInt(),
+  followersCount: (json['followers_count'] as num?)?.toInt(),
+  followingCount: (json['following_count'] as num?)?.toInt(),
+  source: json['source'] == null
+      ? null
+      : AccountSource.fromJson(json['source'] as Map<String, dynamic>),
+  role: json['role'] == null
+      ? null
+      : Role.fromJson(json['role'] as Map<String, dynamic>),
+  roles: (json['roles'] as List<dynamic>?)
+      ?.map((e) => Role.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  muteExpiresAt: json['mute_expires_at'] == null
+      ? null
+      : DateTime.parse(json['mute_expires_at'] as String),
+);
 
-Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'username': instance.username,
-      'acct': instance.acct,
-      'url': instance.url,
-      'display_name': instance.displayName,
-      'note': instance.note,
-      'avatar': instance.avatar,
-      'avatar_static': instance.avatarStatic,
-      'header': instance.header,
-      'header_static': instance.headerStatic,
-      'locked': instance.locked,
-      'fields': instance.fields,
-      'emojis': instance.emojis,
-      'bot': instance.bot,
-      'group': instance.group,
-      'discoverable': instance.discoverable,
-      'noindex': instance.noindex,
-      'moved': instance.moved,
-      'suspended': instance.suspended,
-      'limited': instance.limited,
-      'created_at': instance.createdAt?.toIso8601String(),
-      'attribution_domains': instance.attributionDomains,
-      'last_status_at': instance.lastStatusAt?.toIso8601String(),
-      'statuses_count': instance.statusesCount,
-      'followers_count': instance.followersCount,
-      'following_count': instance.followingCount,
-      'source': instance.source,
-      'role': instance.role,
-      'roles': instance.roles,
-      'mute_expires_at': instance.muteExpiresAt?.toIso8601String(),
-    };
+Map<String, dynamic> _$AccountToJson(_Account instance) => <String, dynamic>{
+  'id': instance.id,
+  'username': instance.username,
+  'acct': instance.acct,
+  'url': instance.url,
+  'display_name': instance.displayName,
+  'note': instance.note,
+  'avatar': instance.avatar,
+  'avatar_static': instance.avatarStatic,
+  'header': instance.header,
+  'header_static': instance.headerStatic,
+  'locked': instance.locked,
+  'fields': instance.fields,
+  'emojis': instance.emojis,
+  'bot': instance.bot,
+  'group': instance.group,
+  'discoverable': instance.discoverable,
+  'noindex': instance.noindex,
+  'moved': instance.moved,
+  'suspended': instance.suspended,
+  'limited': instance.limited,
+  'created_at': instance.createdAt?.toIso8601String(),
+  'attribution_domains': instance.attributionDomains,
+  'last_status_at': instance.lastStatusAt?.toIso8601String(),
+  'statuses_count': instance.statusesCount,
+  'followers_count': instance.followersCount,
+  'following_count': instance.followingCount,
+  'source': instance.source,
+  'role': instance.role,
+  'roles': instance.roles,
+  'mute_expires_at': instance.muteExpiresAt?.toIso8601String(),
+};
 
-_$AccountFieldImpl _$$AccountFieldImplFromJson(Map<String, dynamic> json) =>
-    _$AccountFieldImpl(
+_AccountField _$AccountFieldFromJson(Map<String, dynamic> json) =>
+    _AccountField(
       name: json['name'] as String?,
       value: json['value'] as String?,
       verifiedAt: json['verified_at'] == null
@@ -103,15 +101,15 @@ _$AccountFieldImpl _$$AccountFieldImplFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['verified_at'] as String),
     );
 
-Map<String, dynamic> _$$AccountFieldImplToJson(_$AccountFieldImpl instance) =>
+Map<String, dynamic> _$AccountFieldToJson(_AccountField instance) =>
     <String, dynamic>{
       'name': instance.name,
       'value': instance.value,
       'verified_at': instance.verifiedAt?.toIso8601String(),
     };
 
-_$AccountSourceImpl _$$AccountSourceImplFromJson(Map<String, dynamic> json) =>
-    _$AccountSourceImpl(
+_AccountSource _$AccountSourceFromJson(Map<String, dynamic> json) =>
+    _AccountSource(
       note: json['note'] as String?,
       fields: (json['fields'] as List<dynamic>?)
           ?.map((e) => AccountField.fromJson(e as Map<String, dynamic>))
@@ -126,7 +124,7 @@ _$AccountSourceImpl _$$AccountSourceImplFromJson(Map<String, dynamic> json) =>
       indexable: json['indexable'] as bool?,
     );
 
-Map<String, dynamic> _$$AccountSourceImplToJson(_$AccountSourceImpl instance) =>
+Map<String, dynamic> _$AccountSourceToJson(_AccountSource instance) =>
     <String, dynamic>{
       'note': instance.note,
       'fields': instance.fields,

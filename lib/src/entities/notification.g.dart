@@ -6,8 +6,8 @@ part of 'notification.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
-    _$NotificationImpl(
+_Notification _$NotificationFromJson(Map<String, dynamic> json) =>
+    _Notification(
       id: json['id'] as String?,
       type: $enumDecodeNullable(_$NotificationTypeEnumMap, json['type']),
       createdAt: json['created_at'] == null
@@ -25,14 +25,16 @@ _$NotificationImpl _$$NotificationImplFromJson(Map<String, dynamic> json) =>
       relationshipSeveranceEvent: json['event'] == null
           ? null
           : RelationshipSeveranceEvent.fromJson(
-              json['event'] as Map<String, dynamic>),
+              json['event'] as Map<String, dynamic>,
+            ),
       moderationWarning: json['moderation_warning'] == null
           ? null
           : AccountWarning.fromJson(
-              json['moderation_warning'] as Map<String, dynamic>),
+              json['moderation_warning'] as Map<String, dynamic>,
+            ),
     );
 
-Map<String, dynamic> _$$NotificationImplToJson(_$NotificationImpl instance) =>
+Map<String, dynamic> _$NotificationToJson(_Notification instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': _$NotificationTypeEnumMap[instance.type],

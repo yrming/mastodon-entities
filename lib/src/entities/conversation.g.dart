@@ -6,8 +6,8 @@ part of 'conversation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ConversationImpl _$$ConversationImplFromJson(Map<String, dynamic> json) =>
-    _$ConversationImpl(
+_Conversation _$ConversationFromJson(Map<String, dynamic> json) =>
+    _Conversation(
       id: json['id'] as String?,
       unread: json['unread'] as bool?,
       accounts: (json['accounts'] as List<dynamic>?)
@@ -18,7 +18,7 @@ _$ConversationImpl _$$ConversationImplFromJson(Map<String, dynamic> json) =>
           : Status.fromJson(json['last_status'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ConversationImplToJson(_$ConversationImpl instance) =>
+Map<String, dynamic> _$ConversationToJson(_Conversation instance) =>
     <String, dynamic>{
       'id': instance.id,
       'unread': instance.unread,

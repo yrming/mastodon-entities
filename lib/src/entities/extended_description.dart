@@ -6,7 +6,7 @@ part 'extended_description.g.dart';
 /// Represents an extended description for the instance, to be shown on its
 /// about page.
 @freezed
-class ExtendedDescription with _$ExtendedDescription {
+abstract class ExtendedDescription with _$ExtendedDescription {
   const factory ExtendedDescription({
     /// A timestamp of when the extended description was last updated.
     @JsonKey(name: 'updated_at') final DateTime? updatedAt,

@@ -10,7 +10,7 @@ part 'admin_report.g.dart';
 
 /// Admin-level information about a filed report.
 @freezed
-class AdminReport with _$AdminReport {
+abstract class AdminReport with _$AdminReport {
   const factory AdminReport({
     /// The ID of the report in the database.
     @JsonKey(name: 'id') final String? id,

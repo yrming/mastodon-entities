@@ -9,7 +9,7 @@ part 'report.g.dart';
 /// Reports filed against users and/or statuses, to be taken action on by
 /// moderators.
 @freezed
-class Report with _$Report {
+abstract class Report with _$Report {
   const factory Report({
     /// The ID of the report in the database.
     @JsonKey(name: 'id') final String? id,

@@ -7,7 +7,7 @@ part 'preview_card_author.g.dart';
 
 /// Represents an author in a rich preview card.
 @freezed
-class PreviewCardAuthor with _$PreviewCardAuthor {
+abstract class PreviewCardAuthor with _$PreviewCardAuthor {
   const factory PreviewCardAuthor({
     /// The original resource author's name.
     @JsonKey(name: 'name') final String? name,

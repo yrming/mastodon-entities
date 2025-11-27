@@ -8,7 +8,7 @@ part 'preferences.g.dart';
 
 /// Represents a user's preferences.
 @freezed
-class Preferences with _$Preferences {
+abstract class Preferences with _$Preferences {
   const factory Preferences({
     /// Default visibility for new posts. Equivalent to Account.source.privacy.
     @JsonKey(name: 'posting:default:visibility')

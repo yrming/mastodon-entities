@@ -9,7 +9,7 @@ part 'status_edit.g.dart';
 
 /// Represents a revision of a status that has been edited.
 @freezed
-class StatusEdit with _$StatusEdit {
+abstract class StatusEdit with _$StatusEdit {
   const factory StatusEdit({
     /// The content of the status at this revision.
     @JsonKey(name: 'content') final String? content,
@@ -44,7 +44,7 @@ class StatusEdit with _$StatusEdit {
 }
 
 @freezed
-class StatusEditPoll with _$StatusEditPoll {
+abstract class StatusEditPoll with _$StatusEditPoll {
   const factory StatusEditPoll({
     /// The poll options at this revision.
     @JsonKey(name: 'options') final List<StatusEditPollOption>? options,
@@ -55,7 +55,7 @@ class StatusEditPoll with _$StatusEditPoll {
 }
 
 @freezed
-class StatusEditPollOption with _$StatusEditPollOption {
+abstract class StatusEditPollOption with _$StatusEditPollOption {
   const factory StatusEditPollOption({
     /// The text for a poll option.
     @JsonKey(name: 'title') final String? title,

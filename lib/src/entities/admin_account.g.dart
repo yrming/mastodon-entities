@@ -6,8 +6,8 @@ part of 'admin_account.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AdminAccountImpl _$$AdminAccountImplFromJson(Map<String, dynamic> json) =>
-    _$AdminAccountImpl(
+_AdminAccount _$AdminAccountFromJson(Map<String, dynamic> json) =>
+    _AdminAccount(
       id: json['id'] as String?,
       username: json['username'] as String?,
       domain: json['domain'] as String?,
@@ -36,7 +36,7 @@ _$AdminAccountImpl _$$AdminAccountImplFromJson(Map<String, dynamic> json) =>
       invitedByAccountId: json['invited_by_account_id'] as String?,
     );
 
-Map<String, dynamic> _$$AdminAccountImplToJson(_$AdminAccountImpl instance) =>
+Map<String, dynamic> _$AdminAccountToJson(_AdminAccount instance) =>
     <String, dynamic>{
       'id': instance.id,
       'username': instance.username,

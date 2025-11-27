@@ -5,7 +5,7 @@ part 'marker.g.dart';
 
 /// Represents the last read position within a user's timelines.
 @freezed
-class Marker with _$Marker {
+abstract class Marker with _$Marker {
   const factory Marker({
     /// The ID of the most recently viewed entity.
     @JsonKey(name: 'last_read_id') final String? lastReadId,

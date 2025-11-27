@@ -8,7 +8,7 @@ part 'notification_request.g.dart';
 
 /// Represents a group of filtered notifications from a specific user.
 @freezed
-class NotificationRequest with _$NotificationRequest {
+abstract class NotificationRequest with _$NotificationRequest {
   const factory NotificationRequest({
     /// The id of the notification request in the database.
     @JsonKey(name: 'id') final String? id,

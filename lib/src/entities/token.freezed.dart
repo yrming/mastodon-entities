@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,253 +9,286 @@ part of 'token.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Token _$TokenFromJson(Map<String, dynamic> json) {
-  return _Token.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Token {
-  /// An OAuth token to be used for authorization.
-  @JsonKey(name: 'access_token')
-  String? get accessToken => throw _privateConstructorUsedError;
 
-  /// The OAuth token type. Mastodon uses Bearer tokens.
-  @JsonKey(name: 'token_type')
-  String? get tokenType => throw _privateConstructorUsedError;
-
-  /// The OAuth scopes granted by this token, space-separated.
-  @JsonKey(name: 'scope')
-  String? get scope => throw _privateConstructorUsedError;
-
-  /// When the token was generated.
-  @JsonKey(name: 'created_at')
-  int? get createdAt => throw _privateConstructorUsedError;
+/// An OAuth token to be used for authorization.
+@JsonKey(name: 'access_token') String? get accessToken;/// The OAuth token type. Mastodon uses Bearer tokens.
+@JsonKey(name: 'token_type') String? get tokenType;/// The OAuth scopes granted by this token, space-separated.
+@JsonKey(name: 'scope') String? get scope;/// When the token was generated.
+@JsonKey(name: 'created_at') int? get createdAt;
+/// Create a copy of Token
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$TokenCopyWith<Token> get copyWith => _$TokenCopyWithImpl<Token>(this as Token, _$identity);
 
   /// Serializes this Token to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Token
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $TokenCopyWith<Token> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Token&&(identical(other.accessToken, accessToken) || other.accessToken == accessToken)&&(identical(other.tokenType, tokenType) || other.tokenType == tokenType)&&(identical(other.scope, scope) || other.scope == scope)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,accessToken,tokenType,scope,createdAt);
+
+@override
+String toString() {
+  return 'Token(accessToken: $accessToken, tokenType: $tokenType, scope: $scope, createdAt: $createdAt)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $TokenCopyWith<$Res> {
-  factory $TokenCopyWith(Token value, $Res Function(Token) then) =
-      _$TokenCopyWithImpl<$Res, Token>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'access_token') String? accessToken,
-      @JsonKey(name: 'token_type') String? tokenType,
-      @JsonKey(name: 'scope') String? scope,
-      @JsonKey(name: 'created_at') int? createdAt});
-}
+abstract mixin class $TokenCopyWith<$Res>  {
+  factory $TokenCopyWith(Token value, $Res Function(Token) _then) = _$TokenCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'access_token') String? accessToken,@JsonKey(name: 'token_type') String? tokenType,@JsonKey(name: 'scope') String? scope,@JsonKey(name: 'created_at') int? createdAt
+});
 
+
+
+
+}
 /// @nodoc
-class _$TokenCopyWithImpl<$Res, $Val extends Token>
+class _$TokenCopyWithImpl<$Res>
     implements $TokenCopyWith<$Res> {
-  _$TokenCopyWithImpl(this._value, this._then);
+  _$TokenCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Token _self;
+  final $Res Function(Token) _then;
 
-  /// Create a copy of Token
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? accessToken = freezed,
-    Object? tokenType = freezed,
-    Object? scope = freezed,
-    Object? createdAt = freezed,
-  }) {
-    return _then(_value.copyWith(
-      accessToken: freezed == accessToken
-          ? _value.accessToken
-          : accessToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-      tokenType: freezed == tokenType
-          ? _value.tokenType
-          : tokenType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      scope: freezed == scope
-          ? _value.scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
-  }
+/// Create a copy of Token
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? accessToken = freezed,Object? tokenType = freezed,Object? scope = freezed,Object? createdAt = freezed,}) {
+  return _then(_self.copyWith(
+accessToken: freezed == accessToken ? _self.accessToken : accessToken // ignore: cast_nullable_to_non_nullable
+as String?,tokenType: freezed == tokenType ? _self.tokenType : tokenType // ignore: cast_nullable_to_non_nullable
+as String?,scope: freezed == scope ? _self.scope : scope // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$TokenImplCopyWith<$Res> implements $TokenCopyWith<$Res> {
-  factory _$$TokenImplCopyWith(
-          _$TokenImpl value, $Res Function(_$TokenImpl) then) =
-      __$$TokenImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'access_token') String? accessToken,
-      @JsonKey(name: 'token_type') String? tokenType,
-      @JsonKey(name: 'scope') String? scope,
-      @JsonKey(name: 'created_at') int? createdAt});
 }
 
-/// @nodoc
-class __$$TokenImplCopyWithImpl<$Res>
-    extends _$TokenCopyWithImpl<$Res, _$TokenImpl>
-    implements _$$TokenImplCopyWith<$Res> {
-  __$$TokenImplCopyWithImpl(
-      _$TokenImpl _value, $Res Function(_$TokenImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Token
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? accessToken = freezed,
-    Object? tokenType = freezed,
-    Object? scope = freezed,
-    Object? createdAt = freezed,
-  }) {
-    return _then(_$TokenImpl(
-      accessToken: freezed == accessToken
-          ? _value.accessToken
-          : accessToken // ignore: cast_nullable_to_non_nullable
-              as String?,
-      tokenType: freezed == tokenType
-          ? _value.tokenType
-          : tokenType // ignore: cast_nullable_to_non_nullable
-              as String?,
-      scope: freezed == scope
-          ? _value.scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [Token].
+extension TokenPatterns on Token {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Token value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Token() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Token value)  $default,){
+final _that = this;
+switch (_that) {
+case _Token():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Token value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Token() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'access_token')  String? accessToken, @JsonKey(name: 'token_type')  String? tokenType, @JsonKey(name: 'scope')  String? scope, @JsonKey(name: 'created_at')  int? createdAt)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Token() when $default != null:
+return $default(_that.accessToken,_that.tokenType,_that.scope,_that.createdAt);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'access_token')  String? accessToken, @JsonKey(name: 'token_type')  String? tokenType, @JsonKey(name: 'scope')  String? scope, @JsonKey(name: 'created_at')  int? createdAt)  $default,) {final _that = this;
+switch (_that) {
+case _Token():
+return $default(_that.accessToken,_that.tokenType,_that.scope,_that.createdAt);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'access_token')  String? accessToken, @JsonKey(name: 'token_type')  String? tokenType, @JsonKey(name: 'scope')  String? scope, @JsonKey(name: 'created_at')  int? createdAt)?  $default,) {final _that = this;
+switch (_that) {
+case _Token() when $default != null:
+return $default(_that.accessToken,_that.tokenType,_that.scope,_that.createdAt);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$TokenImpl implements _Token {
-  const _$TokenImpl(
-      {@JsonKey(name: 'access_token') this.accessToken,
-      @JsonKey(name: 'token_type') this.tokenType,
-      @JsonKey(name: 'scope') this.scope,
-      @JsonKey(name: 'created_at') this.createdAt});
 
-  factory _$TokenImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TokenImplFromJson(json);
+class _Token implements Token {
+  const _Token({@JsonKey(name: 'access_token') this.accessToken, @JsonKey(name: 'token_type') this.tokenType, @JsonKey(name: 'scope') this.scope, @JsonKey(name: 'created_at') this.createdAt});
+  factory _Token.fromJson(Map<String, dynamic> json) => _$TokenFromJson(json);
 
-  /// An OAuth token to be used for authorization.
-  @override
-  @JsonKey(name: 'access_token')
-  final String? accessToken;
+/// An OAuth token to be used for authorization.
+@override@JsonKey(name: 'access_token') final  String? accessToken;
+/// The OAuth token type. Mastodon uses Bearer tokens.
+@override@JsonKey(name: 'token_type') final  String? tokenType;
+/// The OAuth scopes granted by this token, space-separated.
+@override@JsonKey(name: 'scope') final  String? scope;
+/// When the token was generated.
+@override@JsonKey(name: 'created_at') final  int? createdAt;
 
-  /// The OAuth token type. Mastodon uses Bearer tokens.
-  @override
-  @JsonKey(name: 'token_type')
-  final String? tokenType;
+/// Create a copy of Token
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$TokenCopyWith<_Token> get copyWith => __$TokenCopyWithImpl<_Token>(this, _$identity);
 
-  /// The OAuth scopes granted by this token, space-separated.
-  @override
-  @JsonKey(name: 'scope')
-  final String? scope;
-
-  /// When the token was generated.
-  @override
-  @JsonKey(name: 'created_at')
-  final int? createdAt;
-
-  @override
-  String toString() {
-    return 'Token(accessToken: $accessToken, tokenType: $tokenType, scope: $scope, createdAt: $createdAt)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TokenImpl &&
-            (identical(other.accessToken, accessToken) ||
-                other.accessToken == accessToken) &&
-            (identical(other.tokenType, tokenType) ||
-                other.tokenType == tokenType) &&
-            (identical(other.scope, scope) || other.scope == scope) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, accessToken, tokenType, scope, createdAt);
-
-  /// Create a copy of Token
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TokenImplCopyWith<_$TokenImpl> get copyWith =>
-      __$$TokenImplCopyWithImpl<_$TokenImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TokenImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$TokenToJson(this, );
 }
 
-abstract class _Token implements Token {
-  const factory _Token(
-      {@JsonKey(name: 'access_token') final String? accessToken,
-      @JsonKey(name: 'token_type') final String? tokenType,
-      @JsonKey(name: 'scope') final String? scope,
-      @JsonKey(name: 'created_at') final int? createdAt}) = _$TokenImpl;
-
-  factory _Token.fromJson(Map<String, dynamic> json) = _$TokenImpl.fromJson;
-
-  /// An OAuth token to be used for authorization.
-  @override
-  @JsonKey(name: 'access_token')
-  String? get accessToken;
-
-  /// The OAuth token type. Mastodon uses Bearer tokens.
-  @override
-  @JsonKey(name: 'token_type')
-  String? get tokenType;
-
-  /// The OAuth scopes granted by this token, space-separated.
-  @override
-  @JsonKey(name: 'scope')
-  String? get scope;
-
-  /// When the token was generated.
-  @override
-  @JsonKey(name: 'created_at')
-  int? get createdAt;
-
-  /// Create a copy of Token
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TokenImplCopyWith<_$TokenImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Token&&(identical(other.accessToken, accessToken) || other.accessToken == accessToken)&&(identical(other.tokenType, tokenType) || other.tokenType == tokenType)&&(identical(other.scope, scope) || other.scope == scope)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,accessToken,tokenType,scope,createdAt);
+
+@override
+String toString() {
+  return 'Token(accessToken: $accessToken, tokenType: $tokenType, scope: $scope, createdAt: $createdAt)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$TokenCopyWith<$Res> implements $TokenCopyWith<$Res> {
+  factory _$TokenCopyWith(_Token value, $Res Function(_Token) _then) = __$TokenCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'access_token') String? accessToken,@JsonKey(name: 'token_type') String? tokenType,@JsonKey(name: 'scope') String? scope,@JsonKey(name: 'created_at') int? createdAt
+});
+
+
+
+
+}
+/// @nodoc
+class __$TokenCopyWithImpl<$Res>
+    implements _$TokenCopyWith<$Res> {
+  __$TokenCopyWithImpl(this._self, this._then);
+
+  final _Token _self;
+  final $Res Function(_Token) _then;
+
+/// Create a copy of Token
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? accessToken = freezed,Object? tokenType = freezed,Object? scope = freezed,Object? createdAt = freezed,}) {
+  return _then(_Token(
+accessToken: freezed == accessToken ? _self.accessToken : accessToken // ignore: cast_nullable_to_non_nullable
+as String?,tokenType: freezed == tokenType ? _self.tokenType : tokenType // ignore: cast_nullable_to_non_nullable
+as String?,scope: freezed == scope ? _self.scope : scope // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+// dart format on

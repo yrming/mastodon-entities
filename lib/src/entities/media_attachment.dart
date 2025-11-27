@@ -7,7 +7,7 @@ part 'media_attachment.g.dart';
 
 /// Represents a file or media attachment that can be added to a status.
 @freezed
-class MediaAttachment with _$MediaAttachment {
+abstract class MediaAttachment with _$MediaAttachment {
   const factory MediaAttachment({
     ///  The ID of the attachment in the database.
     @JsonKey(name: 'id') final String? id,
@@ -41,7 +41,7 @@ class MediaAttachment with _$MediaAttachment {
 }
 
 @freezed
-class MediaAttachmentMeta with _$MediaAttachmentMeta {
+abstract class MediaAttachmentMeta with _$MediaAttachmentMeta {
   const factory MediaAttachmentMeta({
     @JsonKey(name: 'length') final String? length,
     @JsonKey(name: 'duration') final double? duration,
@@ -63,7 +63,7 @@ class MediaAttachmentMeta with _$MediaAttachmentMeta {
 }
 
 @freezed
-class MediaAttachmentMetadata with _$MediaAttachmentMetadata {
+abstract class MediaAttachmentMetadata with _$MediaAttachmentMetadata {
   const factory MediaAttachmentMetadata({
     @JsonKey(name: 'width') final int? width,
     @JsonKey(name: 'height') final int? height,
@@ -74,14 +74,12 @@ class MediaAttachmentMetadata with _$MediaAttachmentMetadata {
     @JsonKey(name: 'bitrate') final int? bitrate,
   }) = _MediaAttachmentMetadata;
 
-  factory MediaAttachmentMetadata.fromJson(
-    final Map<String, dynamic> json,
-  ) =>
+  factory MediaAttachmentMetadata.fromJson(final Map<String, dynamic> json) =>
       _$MediaAttachmentMetadataFromJson(json);
 }
 
 @freezed
-class MediaAttachmentMetaFocus with _$MediaAttachmentMetaFocus {
+abstract class MediaAttachmentMetaFocus with _$MediaAttachmentMetaFocus {
   const factory MediaAttachmentMetaFocus({
     @JsonKey(name: 'x') final double? x,
     @JsonKey(name: 'y') final double? y,

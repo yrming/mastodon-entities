@@ -6,7 +6,7 @@ part 'token.g.dart';
 /// Represents an OAuth token used for authenticating with the API and
 /// performing actions.
 @freezed
-class Token with _$Token {
+abstract class Token with _$Token {
   const factory Token({
     /// An OAuth token to be used for authorization.
     @JsonKey(name: 'access_token') final String? accessToken,

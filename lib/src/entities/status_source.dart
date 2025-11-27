@@ -5,7 +5,7 @@ part 'status_source.g.dart';
 
 /// Represents a status's source as plain text.
 @freezed
-class StatusSource with _$StatusSource {
+abstract class StatusSource with _$StatusSource {
   const factory StatusSource({
     /// ID of the status in the database.
     @JsonKey(name: 'id') final String? id,

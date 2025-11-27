@@ -6,8 +6,8 @@ part of 'relationship.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$RelationshipImpl _$$RelationshipImplFromJson(Map<String, dynamic> json) =>
-    _$RelationshipImpl(
+_Relationship _$RelationshipFromJson(Map<String, dynamic> json) =>
+    _Relationship(
       id: json['id'] as String?,
       following: json['following'] as bool?,
       showingReblogs: json['showing_reblogs'] as bool?,
@@ -27,7 +27,7 @@ _$RelationshipImpl _$$RelationshipImplFromJson(Map<String, dynamic> json) =>
       note: json['note'] as String?,
     );
 
-Map<String, dynamic> _$$RelationshipImplToJson(_$RelationshipImpl instance) =>
+Map<String, dynamic> _$RelationshipToJson(_Relationship instance) =>
     <String, dynamic>{
       'id': instance.id,
       'following': instance.following,

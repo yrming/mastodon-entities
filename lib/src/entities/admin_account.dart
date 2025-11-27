@@ -9,7 +9,7 @@ part 'admin_account.g.dart';
 
 /// Admin-level information about a given account.
 @freezed
-class AdminAccount with _$AdminAccount {
+abstract class AdminAccount with _$AdminAccount {
   const factory AdminAccount({
     /// The ID of the account in the database.
     @JsonKey(name: 'id') final String? id,

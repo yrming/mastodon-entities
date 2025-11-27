@@ -6,14 +6,11 @@ part of 'filter_status.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FilterStatusImpl _$$FilterStatusImplFromJson(Map<String, dynamic> json) =>
-    _$FilterStatusImpl(
+_FilterStatus _$FilterStatusFromJson(Map<String, dynamic> json) =>
+    _FilterStatus(
       id: json['id'] as String?,
       statusId: json['status_id'] as String?,
     );
 
-Map<String, dynamic> _$$FilterStatusImplToJson(_$FilterStatusImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'status_id': instance.statusId,
-    };
+Map<String, dynamic> _$FilterStatusToJson(_FilterStatus instance) =>
+    <String, dynamic>{'id': instance.id, 'status_id': instance.statusId};

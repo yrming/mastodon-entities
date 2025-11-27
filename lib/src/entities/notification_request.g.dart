@@ -6,9 +6,8 @@ part of 'notification_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NotificationRequestImpl _$$NotificationRequestImplFromJson(
-        Map<String, dynamic> json) =>
-    _$NotificationRequestImpl(
+_NotificationRequest _$NotificationRequestFromJson(Map<String, dynamic> json) =>
+    _NotificationRequest(
       id: json['id'] as String?,
       createdAt: json['created_at'] == null
           ? null
@@ -25,13 +24,13 @@ _$NotificationRequestImpl _$$NotificationRequestImplFromJson(
           : Status.fromJson(json['last_status'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$NotificationRequestImplToJson(
-        _$NotificationRequestImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'created_at': instance.createdAt?.toIso8601String(),
-      'updated_at': instance.updatedAt?.toIso8601String(),
-      'from_account': instance.account,
-      'notifications_count': instance.notificationsCount,
-      'last_status': instance.lastStatus,
-    };
+Map<String, dynamic> _$NotificationRequestToJson(
+  _NotificationRequest instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'created_at': instance.createdAt?.toIso8601String(),
+  'updated_at': instance.updatedAt?.toIso8601String(),
+  'from_account': instance.account,
+  'notifications_count': instance.notificationsCount,
+  'last_status': instance.lastStatus,
+};

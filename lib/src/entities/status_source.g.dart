@@ -6,14 +6,14 @@ part of 'status_source.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StatusSourceImpl _$$StatusSourceImplFromJson(Map<String, dynamic> json) =>
-    _$StatusSourceImpl(
+_StatusSource _$StatusSourceFromJson(Map<String, dynamic> json) =>
+    _StatusSource(
       id: json['id'] as String?,
       text: json['text'] as String?,
       spoilerText: json['spoiler_text'] as String?,
     );
 
-Map<String, dynamic> _$$StatusSourceImplToJson(_$StatusSourceImpl instance) =>
+Map<String, dynamic> _$StatusSourceToJson(_StatusSource instance) =>
     <String, dynamic>{
       'id': instance.id,
       'text': instance.text,

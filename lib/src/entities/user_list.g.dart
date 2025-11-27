@@ -6,20 +6,20 @@ part of 'user_list.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserListImpl _$$UserListImplFromJson(Map<String, dynamic> json) =>
-    _$UserListImpl(
-      id: json['id'] as String?,
-      title: json['title'] as String?,
-      repliesPolicy:
-          $enumDecodeNullable(_$RepliesPolicyEnumMap, json['replies_policy']),
-    );
+_UserList _$UserListFromJson(Map<String, dynamic> json) => _UserList(
+  id: json['id'] as String?,
+  title: json['title'] as String?,
+  repliesPolicy: $enumDecodeNullable(
+    _$RepliesPolicyEnumMap,
+    json['replies_policy'],
+  ),
+);
 
-Map<String, dynamic> _$$UserListImplToJson(_$UserListImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'title': instance.title,
-      'replies_policy': _$RepliesPolicyEnumMap[instance.repliesPolicy],
-    };
+Map<String, dynamic> _$UserListToJson(_UserList instance) => <String, dynamic>{
+  'id': instance.id,
+  'title': instance.title,
+  'replies_policy': _$RepliesPolicyEnumMap[instance.repliesPolicy],
+};
 
 const _$RepliesPolicyEnumMap = {
   RepliesPolicy.followed: 'followed',

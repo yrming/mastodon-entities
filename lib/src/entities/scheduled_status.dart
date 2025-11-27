@@ -8,7 +8,7 @@ part 'scheduled_status.g.dart';
 
 /// Represents a status that will be published at a future scheduled date.
 @freezed
-class ScheduledStatus with _$ScheduledStatus {
+abstract class ScheduledStatus with _$ScheduledStatus {
   const factory ScheduledStatus({
     /// ID of the scheduled status in the database.
     @JsonKey(name: 'id') final String? id,
@@ -30,7 +30,7 @@ class ScheduledStatus with _$ScheduledStatus {
 }
 
 @freezed
-class ScheduledStatusParams with _$ScheduledStatusParams {
+abstract class ScheduledStatusParams with _$ScheduledStatusParams {
   const factory ScheduledStatusParams({
     /// Text to be used as status content.
     @JsonKey(name: 'text') final String? text,
@@ -72,7 +72,7 @@ class ScheduledStatusParams with _$ScheduledStatusParams {
 }
 
 @freezed
-class ScheduledStatusPoll with _$ScheduledStatusPoll {
+abstract class ScheduledStatusPoll with _$ScheduledStatusPoll {
   const factory ScheduledStatusPoll({
     /// The poll options to be used.
     @JsonKey(name: 'options') final List<String>? options,

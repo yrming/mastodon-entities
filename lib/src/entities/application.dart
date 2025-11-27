@@ -6,7 +6,7 @@ part 'application.g.dart';
 /// Represents an application that interfaces with the REST API to access
 /// accounts or post statuses.
 @freezed
-class Application with _$Application {
+abstract class Application with _$Application {
   const factory Application({
     /// The name of your application.
     @JsonKey(name: 'name') final String? name,

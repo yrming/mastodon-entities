@@ -9,7 +9,7 @@ part 'preview_card.g.dart';
 /// Represents a rich preview card that is generated using OpenGraph tags from
 /// a URL.
 @freezed
-class PreviewCard with _$PreviewCard {
+abstract class PreviewCard with _$PreviewCard {
   const factory PreviewCard({
     /// Location of linked resource.
     @JsonKey(name: 'url') final String? url,
@@ -64,7 +64,7 @@ class PreviewCard with _$PreviewCard {
 }
 
 @freezed
-class TrendsLink with _$TrendsLink {
+abstract class TrendsLink with _$TrendsLink {
   const factory TrendsLink({
     /// Location of linked resource.
     @JsonKey(name: 'url') final String? url,
@@ -122,7 +122,7 @@ class TrendsLink with _$TrendsLink {
 }
 
 @freezed
-class TrendsLinkHistory with _$TrendsLinkHistory {
+abstract class TrendsLinkHistory with _$TrendsLinkHistory {
   const factory TrendsLinkHistory({
     /// UNIX timestamp on midnight of the given day.
     @JsonKey(name: 'day') final String? day,

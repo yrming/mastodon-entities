@@ -4,7 +4,7 @@ part 'media_attribute.freezed.dart';
 part 'media_attribute.g.dart';
 
 @freezed
-class MediaAttribute with _$MediaAttribute {
+abstract class MediaAttribute with _$MediaAttribute {
   const factory MediaAttribute({
     @JsonKey(name: 'id') final String? id,
     @JsonKey(name: 'description') final String? description,

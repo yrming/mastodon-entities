@@ -6,15 +6,15 @@ part of 'privacy_policy.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PrivacyPolicyImpl _$$PrivacyPolicyImplFromJson(Map<String, dynamic> json) =>
-    _$PrivacyPolicyImpl(
+_PrivacyPolicy _$PrivacyPolicyFromJson(Map<String, dynamic> json) =>
+    _PrivacyPolicy(
       updatedAt: json['updated_at'] == null
           ? null
           : DateTime.parse(json['updated_at'] as String),
       content: json['content'] as String?,
     );
 
-Map<String, dynamic> _$$PrivacyPolicyImplToJson(_$PrivacyPolicyImpl instance) =>
+Map<String, dynamic> _$PrivacyPolicyToJson(_PrivacyPolicy instance) =>
     <String, dynamic>{
       'updated_at': instance.updatedAt?.toIso8601String(),
       'content': instance.content,

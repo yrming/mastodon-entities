@@ -7,7 +7,7 @@ part 'filter_result.g.dart';
 
 /// Represents a filter whose keywords matched a given status.
 @freezed
-class FilterResult with _$FilterResult {
+abstract class FilterResult with _$FilterResult {
   const factory FilterResult({
     /// The filter that was matched.
     @JsonKey(name: 'filter') final Filter? filter,

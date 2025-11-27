@@ -5,7 +5,7 @@ part 'admin_canonical_email_block.g.dart';
 
 /// Represents a canonical email block (hashed).
 @freezed
-class AdminCanonicalEmailBlock with _$AdminCanonicalEmailBlock {
+abstract class AdminCanonicalEmailBlock with _$AdminCanonicalEmailBlock {
   const factory AdminCanonicalEmailBlock({
     /// The ID of the email block in the database.
     @JsonKey(name: 'id') final String? id,

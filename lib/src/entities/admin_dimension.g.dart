@@ -6,24 +6,19 @@ part of 'admin_dimension.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AdminDimensionImpl _$$AdminDimensionImplFromJson(Map<String, dynamic> json) =>
-    _$AdminDimensionImpl(
+_AdminDimension _$AdminDimensionFromJson(Map<String, dynamic> json) =>
+    _AdminDimension(
       key: json['key'] as String?,
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => AdminDimensionData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$AdminDimensionImplToJson(
-        _$AdminDimensionImpl instance) =>
-    <String, dynamic>{
-      'key': instance.key,
-      'data': instance.data,
-    };
+Map<String, dynamic> _$AdminDimensionToJson(_AdminDimension instance) =>
+    <String, dynamic>{'key': instance.key, 'data': instance.data};
 
-_$AdminDimensionDataImpl _$$AdminDimensionDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$AdminDimensionDataImpl(
+_AdminDimensionData _$AdminDimensionDataFromJson(Map<String, dynamic> json) =>
+    _AdminDimensionData(
       key: json['key'] as String?,
       humanKey: json['human_key'] as String?,
       value: json['value'] as String?,
@@ -31,8 +26,7 @@ _$AdminDimensionDataImpl _$$AdminDimensionDataImplFromJson(
       humanValue: json['human_value'] as String?,
     );
 
-Map<String, dynamic> _$$AdminDimensionDataImplToJson(
-        _$AdminDimensionDataImpl instance) =>
+Map<String, dynamic> _$AdminDimensionDataToJson(_AdminDimensionData instance) =>
     <String, dynamic>{
       'key': instance.key,
       'human_key': instance.humanKey,

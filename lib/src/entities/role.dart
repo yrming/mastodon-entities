@@ -5,7 +5,7 @@ part 'role.g.dart';
 
 /// Represents a custom user role that grants permissions.
 @freezed
-class Role with _$Role {
+abstract class Role with _$Role {
   const factory Role({
     /// The ID of the Role in the database.
     @JsonKey(name: 'id') final String? id,

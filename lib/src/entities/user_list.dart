@@ -7,7 +7,7 @@ part 'user_list.g.dart';
 
 /// Represents a list of some users that the authenticated user follows.
 @freezed
-class UserList with _$UserList {
+abstract class UserList with _$UserList {
   const factory UserList({
     /// The internal database ID of the list.
     @JsonKey(name: 'id') final String? id,

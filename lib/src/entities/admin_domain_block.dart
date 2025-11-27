@@ -7,7 +7,7 @@ part 'admin_domain_block.g.dart';
 
 /// Represents a domain limited from federating.
 @freezed
-class AdminDomainBlock with _$AdminDomainBlock {
+abstract class AdminDomainBlock with _$AdminDomainBlock {
   const factory AdminDomainBlock({
     /// The ID of the DomainBlock in the database.
     @JsonKey(name: 'id') final String? id,

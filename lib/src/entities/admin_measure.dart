@@ -5,7 +5,7 @@ part 'admin_measure.g.dart';
 
 /// Represents quantitative data about the server.
 @freezed
-class AdminMeasure with _$AdminMeasure {
+abstract class AdminMeasure with _$AdminMeasure {
   const factory AdminMeasure({
     /// The unique keystring for the requested measure.
     @JsonKey(name: 'key') final String? key,
@@ -34,7 +34,7 @@ class AdminMeasure with _$AdminMeasure {
 }
 
 @freezed
-class AdminMeasureData with _$AdminMeasureData {
+abstract class AdminMeasureData with _$AdminMeasureData {
   const factory AdminMeasureData({
     /// Midnight on the requested day in the time period.
     @JsonKey(name: 'date') final DateTime? date,

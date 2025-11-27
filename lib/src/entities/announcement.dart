@@ -9,7 +9,7 @@ part 'announcement.g.dart';
 
 /// Represents an announcement set by an administrator.
 @freezed
-class Announcement with _$Announcement {
+abstract class Announcement with _$Announcement {
   const factory Announcement({
     /// The ID of the announcement in the database.
     @JsonKey(name: 'id') final String? id,
@@ -60,7 +60,7 @@ class Announcement with _$Announcement {
 }
 
 @freezed
-class AnnouncementAccount with _$AnnouncementAccount {
+abstract class AnnouncementAccount with _$AnnouncementAccount {
   const factory AnnouncementAccount({
     /// The account ID of the mentioned user.
     @JsonKey(name: 'id') final String? id,
@@ -81,7 +81,7 @@ class AnnouncementAccount with _$AnnouncementAccount {
 }
 
 @freezed
-class AnnouncementStatus with _$AnnouncementStatus {
+abstract class AnnouncementStatus with _$AnnouncementStatus {
   const factory AnnouncementStatus({
     /// The ID of an attached Status in the database.
     @JsonKey(name: 'id') final String? id,

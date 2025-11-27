@@ -7,7 +7,7 @@ part 'admin_ip_block.g.dart';
 
 /// Represents an IP address range that cannot be used to sign up.
 @freezed
-class AdminIpBlock with _$AdminIpBlock {
+abstract class AdminIpBlock with _$AdminIpBlock {
   const factory AdminIpBlock({
     /// The ID of the DomainBlock in the database.
     @JsonKey(name: 'id') final String? id,

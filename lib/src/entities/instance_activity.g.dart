@@ -6,17 +6,15 @@ part of 'instance_activity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$InstanceActivityImpl _$$InstanceActivityImplFromJson(
-        Map<String, dynamic> json) =>
-    _$InstanceActivityImpl(
+_InstanceActivity _$InstanceActivityFromJson(Map<String, dynamic> json) =>
+    _InstanceActivity(
       week: json['week'] as String?,
       statuses: json['statuses'] as String?,
       logins: json['logins'] as String?,
       registrations: json['registrations'] as String?,
     );
 
-Map<String, dynamic> _$$InstanceActivityImplToJson(
-        _$InstanceActivityImpl instance) =>
+Map<String, dynamic> _$InstanceActivityToJson(_InstanceActivity instance) =>
     <String, dynamic>{
       'week': instance.week,
       'statuses': instance.statuses,

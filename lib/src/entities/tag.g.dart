@@ -6,48 +6,45 @@ part of 'tag.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$TagImpl _$$TagImplFromJson(Map<String, dynamic> json) => _$TagImpl(
-      name: json['name'] as String?,
-      url: json['url'] as String?,
-      history: (json['history'] as List<dynamic>?)
-          ?.map((e) => TagHistory.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      following: json['following'] as bool?,
-    );
+_Tag _$TagFromJson(Map<String, dynamic> json) => _Tag(
+  name: json['name'] as String?,
+  url: json['url'] as String?,
+  history: (json['history'] as List<dynamic>?)
+      ?.map((e) => TagHistory.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  following: json['following'] as bool?,
+);
 
-Map<String, dynamic> _$$TagImplToJson(_$TagImpl instance) => <String, dynamic>{
-      'name': instance.name,
-      'url': instance.url,
-      'history': instance.history,
-      'following': instance.following,
-    };
+Map<String, dynamic> _$TagToJson(_Tag instance) => <String, dynamic>{
+  'name': instance.name,
+  'url': instance.url,
+  'history': instance.history,
+  'following': instance.following,
+};
 
-_$TagHistoryImpl _$$TagHistoryImplFromJson(Map<String, dynamic> json) =>
-    _$TagHistoryImpl(
-      day: json['day'] as String?,
-      uses: json['uses'] as String?,
-      accounts: json['accounts'] as String?,
-    );
+_TagHistory _$TagHistoryFromJson(Map<String, dynamic> json) => _TagHistory(
+  day: json['day'] as String?,
+  uses: json['uses'] as String?,
+  accounts: json['accounts'] as String?,
+);
 
-Map<String, dynamic> _$$TagHistoryImplToJson(_$TagHistoryImpl instance) =>
+Map<String, dynamic> _$TagHistoryToJson(_TagHistory instance) =>
     <String, dynamic>{
       'day': instance.day,
       'uses': instance.uses,
       'accounts': instance.accounts,
     };
 
-_$AdminTagImpl _$$AdminTagImplFromJson(Map<String, dynamic> json) =>
-    _$AdminTagImpl(
-      id: json['id'] as String?,
-      trendable: json['trendable'] as bool?,
-      usable: json['usable'] as bool?,
-      requiresReview: json['requires_review'] as bool?,
-    );
+_AdminTag _$AdminTagFromJson(Map<String, dynamic> json) => _AdminTag(
+  id: json['id'] as String?,
+  trendable: json['trendable'] as bool?,
+  usable: json['usable'] as bool?,
+  requiresReview: json['requires_review'] as bool?,
+);
 
-Map<String, dynamic> _$$AdminTagImplToJson(_$AdminTagImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'trendable': instance.trendable,
-      'usable': instance.usable,
-      'requires_review': instance.requiresReview,
-    };
+Map<String, dynamic> _$AdminTagToJson(_AdminTag instance) => <String, dynamic>{
+  'id': instance.id,
+  'trendable': instance.trendable,
+  'usable': instance.usable,
+  'requires_review': instance.requiresReview,
+};

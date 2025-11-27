@@ -6,9 +6,8 @@ part of 'media_attachment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MediaAttachmentImpl _$$MediaAttachmentImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MediaAttachmentImpl(
+_MediaAttachment _$MediaAttachmentFromJson(Map<String, dynamic> json) =>
+    _MediaAttachment(
       id: json['id'] as String?,
       type: $enumDecodeNullable(_$MediaAttachmentTypeEnumMap, json['type']),
       url: json['url'] as String?,
@@ -21,8 +20,7 @@ _$MediaAttachmentImpl _$$MediaAttachmentImplFromJson(
       blurhash: json['blurhash'] as String?,
     );
 
-Map<String, dynamic> _$$MediaAttachmentImplToJson(
-        _$MediaAttachmentImpl instance) =>
+Map<String, dynamic> _$MediaAttachmentToJson(_MediaAttachment instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': _$MediaAttachmentTypeEnumMap[instance.type],
@@ -42,9 +40,8 @@ const _$MediaAttachmentTypeEnumMap = {
   MediaAttachmentType.audio: 'audio',
 };
 
-_$MediaAttachmentMetaImpl _$$MediaAttachmentMetaImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MediaAttachmentMetaImpl(
+_MediaAttachmentMeta _$MediaAttachmentMetaFromJson(Map<String, dynamic> json) =>
+    _MediaAttachmentMeta(
       length: json['length'] as String?,
       duration: (json['duration'] as num?)?.toDouble(),
       fps: (json['fps'] as num?)?.toInt(),
@@ -58,69 +55,69 @@ _$MediaAttachmentMetaImpl _$$MediaAttachmentMetaImplFromJson(
       original: json['original'] == null
           ? null
           : MediaAttachmentMetadata.fromJson(
-              json['original'] as Map<String, dynamic>),
+              json['original'] as Map<String, dynamic>,
+            ),
       small: json['small'] == null
           ? null
           : MediaAttachmentMetadata.fromJson(
-              json['small'] as Map<String, dynamic>),
+              json['small'] as Map<String, dynamic>,
+            ),
       focus: json['focus'] == null
           ? null
           : MediaAttachmentMetaFocus.fromJson(
-              json['focus'] as Map<String, dynamic>),
+              json['focus'] as Map<String, dynamic>,
+            ),
     );
 
-Map<String, dynamic> _$$MediaAttachmentMetaImplToJson(
-        _$MediaAttachmentMetaImpl instance) =>
-    <String, dynamic>{
-      'length': instance.length,
-      'duration': instance.duration,
-      'fps': instance.fps,
-      'size': instance.size,
-      'width': instance.width,
-      'height': instance.height,
-      'aspect': instance.aspect,
-      'audio_encode': instance.audioEncode,
-      'audio_bitrate': instance.audioBitrate,
-      'audio_channels': instance.audioChannels,
-      'original': instance.original,
-      'small': instance.small,
-      'focus': instance.focus,
-    };
+Map<String, dynamic> _$MediaAttachmentMetaToJson(
+  _MediaAttachmentMeta instance,
+) => <String, dynamic>{
+  'length': instance.length,
+  'duration': instance.duration,
+  'fps': instance.fps,
+  'size': instance.size,
+  'width': instance.width,
+  'height': instance.height,
+  'aspect': instance.aspect,
+  'audio_encode': instance.audioEncode,
+  'audio_bitrate': instance.audioBitrate,
+  'audio_channels': instance.audioChannels,
+  'original': instance.original,
+  'small': instance.small,
+  'focus': instance.focus,
+};
 
-_$MediaAttachmentMetadataImpl _$$MediaAttachmentMetadataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MediaAttachmentMetadataImpl(
-      width: (json['width'] as num?)?.toInt(),
-      height: (json['height'] as num?)?.toInt(),
-      size: json['size'] as String?,
-      aspect: (json['aspect'] as num?)?.toDouble(),
-      frameRate: json['frame_rate'] as String?,
-      duration: (json['duration'] as num?)?.toDouble(),
-      bitrate: (json['bitrate'] as num?)?.toInt(),
-    );
+_MediaAttachmentMetadata _$MediaAttachmentMetadataFromJson(
+  Map<String, dynamic> json,
+) => _MediaAttachmentMetadata(
+  width: (json['width'] as num?)?.toInt(),
+  height: (json['height'] as num?)?.toInt(),
+  size: json['size'] as String?,
+  aspect: (json['aspect'] as num?)?.toDouble(),
+  frameRate: json['frame_rate'] as String?,
+  duration: (json['duration'] as num?)?.toDouble(),
+  bitrate: (json['bitrate'] as num?)?.toInt(),
+);
 
-Map<String, dynamic> _$$MediaAttachmentMetadataImplToJson(
-        _$MediaAttachmentMetadataImpl instance) =>
-    <String, dynamic>{
-      'width': instance.width,
-      'height': instance.height,
-      'size': instance.size,
-      'aspect': instance.aspect,
-      'frame_rate': instance.frameRate,
-      'duration': instance.duration,
-      'bitrate': instance.bitrate,
-    };
+Map<String, dynamic> _$MediaAttachmentMetadataToJson(
+  _MediaAttachmentMetadata instance,
+) => <String, dynamic>{
+  'width': instance.width,
+  'height': instance.height,
+  'size': instance.size,
+  'aspect': instance.aspect,
+  'frame_rate': instance.frameRate,
+  'duration': instance.duration,
+  'bitrate': instance.bitrate,
+};
 
-_$MediaAttachmentMetaFocusImpl _$$MediaAttachmentMetaFocusImplFromJson(
-        Map<String, dynamic> json) =>
-    _$MediaAttachmentMetaFocusImpl(
-      x: (json['x'] as num?)?.toDouble(),
-      y: (json['y'] as num?)?.toDouble(),
-    );
+_MediaAttachmentMetaFocus _$MediaAttachmentMetaFocusFromJson(
+  Map<String, dynamic> json,
+) => _MediaAttachmentMetaFocus(
+  x: (json['x'] as num?)?.toDouble(),
+  y: (json['y'] as num?)?.toDouble(),
+);
 
-Map<String, dynamic> _$$MediaAttachmentMetaFocusImplToJson(
-        _$MediaAttachmentMetaFocusImpl instance) =>
-    <String, dynamic>{
-      'x': instance.x,
-      'y': instance.y,
-    };
+Map<String, dynamic> _$MediaAttachmentMetaFocusToJson(
+  _MediaAttachmentMetaFocus instance,
+) => <String, dynamic>{'x': instance.x, 'y': instance.y};

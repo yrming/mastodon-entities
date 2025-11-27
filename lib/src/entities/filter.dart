@@ -11,7 +11,7 @@ part 'filter.g.dart';
 /// Represents a user-defined filter for determining which statuses should not
 /// be shown to the user.
 @freezed
-class Filter with _$Filter {
+abstract class Filter with _$Filter {
   const factory Filter({
     /// The ID of the Filter in the database.
     @JsonKey(name: 'id') final String? id,

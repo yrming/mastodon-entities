@@ -5,7 +5,7 @@ part 'reaction.g.dart';
 
 /// Represents an emoji reaction to an Announcement.
 @freezed
-class Reaction with _$Reaction {
+abstract class Reaction with _$Reaction {
   const factory Reaction({
     /// The emoji used for the reaction. Either a unicode emoji, or a custom
     /// emoji's shortcode.

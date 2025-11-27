@@ -5,7 +5,7 @@ part 'translation.g.dart';
 
 /// Represents the result of machine translating some status content
 @freezed
-class Translation with _$Translation {
+abstract class Translation with _$Translation {
   const factory Translation({
     /// HTML-encoded translated content of the status.
     @JsonKey(name: 'content') final String? content,
@@ -34,7 +34,7 @@ class Translation with _$Translation {
 }
 
 @freezed
-class TranslationPoll with _$TranslationPoll {
+abstract class TranslationPoll with _$TranslationPoll {
   const factory TranslationPoll({
     /// The ID of the poll.
     @JsonKey(name: 'id') final String? id,
@@ -48,7 +48,7 @@ class TranslationPoll with _$TranslationPoll {
 }
 
 @freezed
-class TranslationPollOption with _$TranslationPollOption {
+abstract class TranslationPollOption with _$TranslationPollOption {
   const factory TranslationPollOption({
     /// The translated title of the poll option.
     @JsonKey(name: 'title') final String? title,
@@ -59,7 +59,7 @@ class TranslationPollOption with _$TranslationPollOption {
 }
 
 @freezed
-class TranslationAttachment with _$TranslationAttachment {
+abstract class TranslationAttachment with _$TranslationAttachment {
   const factory TranslationAttachment({
     /// The id of the attachment.
     @JsonKey(name: 'id') final String? id,

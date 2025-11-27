@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,203 +9,276 @@ part of 'admin_canonical_email_block.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-AdminCanonicalEmailBlock _$AdminCanonicalEmailBlockFromJson(
-    Map<String, dynamic> json) {
-  return _AdminCanonicalEmailBlock.fromJson(json);
-}
 
 /// @nodoc
 mixin _$AdminCanonicalEmailBlock {
-  /// The ID of the email block in the database.
-  @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
 
-  /// The SHA256 hash of the canonical email address.
-  @JsonKey(name: 'canonical_email_hash')
-  String? get canonicalEmailHash => throw _privateConstructorUsedError;
+/// The ID of the email block in the database.
+@JsonKey(name: 'id') String? get id;/// The SHA256 hash of the canonical email address.
+@JsonKey(name: 'canonical_email_hash') String? get canonicalEmailHash;
+/// Create a copy of AdminCanonicalEmailBlock
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AdminCanonicalEmailBlockCopyWith<AdminCanonicalEmailBlock> get copyWith => _$AdminCanonicalEmailBlockCopyWithImpl<AdminCanonicalEmailBlock>(this as AdminCanonicalEmailBlock, _$identity);
 
   /// Serializes this AdminCanonicalEmailBlock to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AdminCanonicalEmailBlock
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AdminCanonicalEmailBlockCopyWith<AdminCanonicalEmailBlock> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AdminCanonicalEmailBlock&&(identical(other.id, id) || other.id == id)&&(identical(other.canonicalEmailHash, canonicalEmailHash) || other.canonicalEmailHash == canonicalEmailHash));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,canonicalEmailHash);
+
+@override
+String toString() {
+  return 'AdminCanonicalEmailBlock(id: $id, canonicalEmailHash: $canonicalEmailHash)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AdminCanonicalEmailBlockCopyWith<$Res> {
-  factory $AdminCanonicalEmailBlockCopyWith(AdminCanonicalEmailBlock value,
-          $Res Function(AdminCanonicalEmailBlock) then) =
-      _$AdminCanonicalEmailBlockCopyWithImpl<$Res, AdminCanonicalEmailBlock>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'canonical_email_hash') String? canonicalEmailHash});
-}
+abstract mixin class $AdminCanonicalEmailBlockCopyWith<$Res>  {
+  factory $AdminCanonicalEmailBlockCopyWith(AdminCanonicalEmailBlock value, $Res Function(AdminCanonicalEmailBlock) _then) = _$AdminCanonicalEmailBlockCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'id') String? id,@JsonKey(name: 'canonical_email_hash') String? canonicalEmailHash
+});
 
+
+
+
+}
 /// @nodoc
-class _$AdminCanonicalEmailBlockCopyWithImpl<$Res,
-        $Val extends AdminCanonicalEmailBlock>
+class _$AdminCanonicalEmailBlockCopyWithImpl<$Res>
     implements $AdminCanonicalEmailBlockCopyWith<$Res> {
-  _$AdminCanonicalEmailBlockCopyWithImpl(this._value, this._then);
+  _$AdminCanonicalEmailBlockCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AdminCanonicalEmailBlock _self;
+  final $Res Function(AdminCanonicalEmailBlock) _then;
 
-  /// Create a copy of AdminCanonicalEmailBlock
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? canonicalEmailHash = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      canonicalEmailHash: freezed == canonicalEmailHash
-          ? _value.canonicalEmailHash
-          : canonicalEmailHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
+/// Create a copy of AdminCanonicalEmailBlock
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = freezed,Object? canonicalEmailHash = freezed,}) {
+  return _then(_self.copyWith(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,canonicalEmailHash: freezed == canonicalEmailHash ? _self.canonicalEmailHash : canonicalEmailHash // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AdminCanonicalEmailBlockImplCopyWith<$Res>
-    implements $AdminCanonicalEmailBlockCopyWith<$Res> {
-  factory _$$AdminCanonicalEmailBlockImplCopyWith(
-          _$AdminCanonicalEmailBlockImpl value,
-          $Res Function(_$AdminCanonicalEmailBlockImpl) then) =
-      __$$AdminCanonicalEmailBlockImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'canonical_email_hash') String? canonicalEmailHash});
 }
 
-/// @nodoc
-class __$$AdminCanonicalEmailBlockImplCopyWithImpl<$Res>
-    extends _$AdminCanonicalEmailBlockCopyWithImpl<$Res,
-        _$AdminCanonicalEmailBlockImpl>
-    implements _$$AdminCanonicalEmailBlockImplCopyWith<$Res> {
-  __$$AdminCanonicalEmailBlockImplCopyWithImpl(
-      _$AdminCanonicalEmailBlockImpl _value,
-      $Res Function(_$AdminCanonicalEmailBlockImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of AdminCanonicalEmailBlock
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? canonicalEmailHash = freezed,
-  }) {
-    return _then(_$AdminCanonicalEmailBlockImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      canonicalEmailHash: freezed == canonicalEmailHash
-          ? _value.canonicalEmailHash
-          : canonicalEmailHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [AdminCanonicalEmailBlock].
+extension AdminCanonicalEmailBlockPatterns on AdminCanonicalEmailBlock {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AdminCanonicalEmailBlock value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AdminCanonicalEmailBlock() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AdminCanonicalEmailBlock value)  $default,){
+final _that = this;
+switch (_that) {
+case _AdminCanonicalEmailBlock():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AdminCanonicalEmailBlock value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AdminCanonicalEmailBlock() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String? id, @JsonKey(name: 'canonical_email_hash')  String? canonicalEmailHash)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AdminCanonicalEmailBlock() when $default != null:
+return $default(_that.id,_that.canonicalEmailHash);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'id')  String? id, @JsonKey(name: 'canonical_email_hash')  String? canonicalEmailHash)  $default,) {final _that = this;
+switch (_that) {
+case _AdminCanonicalEmailBlock():
+return $default(_that.id,_that.canonicalEmailHash);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'id')  String? id, @JsonKey(name: 'canonical_email_hash')  String? canonicalEmailHash)?  $default,) {final _that = this;
+switch (_that) {
+case _AdminCanonicalEmailBlock() when $default != null:
+return $default(_that.id,_that.canonicalEmailHash);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AdminCanonicalEmailBlockImpl implements _AdminCanonicalEmailBlock {
-  const _$AdminCanonicalEmailBlockImpl(
-      {@JsonKey(name: 'id') this.id,
-      @JsonKey(name: 'canonical_email_hash') this.canonicalEmailHash});
 
-  factory _$AdminCanonicalEmailBlockImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AdminCanonicalEmailBlockImplFromJson(json);
+class _AdminCanonicalEmailBlock implements AdminCanonicalEmailBlock {
+  const _AdminCanonicalEmailBlock({@JsonKey(name: 'id') this.id, @JsonKey(name: 'canonical_email_hash') this.canonicalEmailHash});
+  factory _AdminCanonicalEmailBlock.fromJson(Map<String, dynamic> json) => _$AdminCanonicalEmailBlockFromJson(json);
 
-  /// The ID of the email block in the database.
-  @override
-  @JsonKey(name: 'id')
-  final String? id;
+/// The ID of the email block in the database.
+@override@JsonKey(name: 'id') final  String? id;
+/// The SHA256 hash of the canonical email address.
+@override@JsonKey(name: 'canonical_email_hash') final  String? canonicalEmailHash;
 
-  /// The SHA256 hash of the canonical email address.
-  @override
-  @JsonKey(name: 'canonical_email_hash')
-  final String? canonicalEmailHash;
+/// Create a copy of AdminCanonicalEmailBlock
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AdminCanonicalEmailBlockCopyWith<_AdminCanonicalEmailBlock> get copyWith => __$AdminCanonicalEmailBlockCopyWithImpl<_AdminCanonicalEmailBlock>(this, _$identity);
 
-  @override
-  String toString() {
-    return 'AdminCanonicalEmailBlock(id: $id, canonicalEmailHash: $canonicalEmailHash)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AdminCanonicalEmailBlockImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.canonicalEmailHash, canonicalEmailHash) ||
-                other.canonicalEmailHash == canonicalEmailHash));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, canonicalEmailHash);
-
-  /// Create a copy of AdminCanonicalEmailBlock
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AdminCanonicalEmailBlockImplCopyWith<_$AdminCanonicalEmailBlockImpl>
-      get copyWith => __$$AdminCanonicalEmailBlockImplCopyWithImpl<
-          _$AdminCanonicalEmailBlockImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AdminCanonicalEmailBlockImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$AdminCanonicalEmailBlockToJson(this, );
 }
 
-abstract class _AdminCanonicalEmailBlock implements AdminCanonicalEmailBlock {
-  const factory _AdminCanonicalEmailBlock(
-      {@JsonKey(name: 'id') final String? id,
-      @JsonKey(name: 'canonical_email_hash')
-      final String? canonicalEmailHash}) = _$AdminCanonicalEmailBlockImpl;
-
-  factory _AdminCanonicalEmailBlock.fromJson(Map<String, dynamic> json) =
-      _$AdminCanonicalEmailBlockImpl.fromJson;
-
-  /// The ID of the email block in the database.
-  @override
-  @JsonKey(name: 'id')
-  String? get id;
-
-  /// The SHA256 hash of the canonical email address.
-  @override
-  @JsonKey(name: 'canonical_email_hash')
-  String? get canonicalEmailHash;
-
-  /// Create a copy of AdminCanonicalEmailBlock
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AdminCanonicalEmailBlockImplCopyWith<_$AdminCanonicalEmailBlockImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AdminCanonicalEmailBlock&&(identical(other.id, id) || other.id == id)&&(identical(other.canonicalEmailHash, canonicalEmailHash) || other.canonicalEmailHash == canonicalEmailHash));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,canonicalEmailHash);
+
+@override
+String toString() {
+  return 'AdminCanonicalEmailBlock(id: $id, canonicalEmailHash: $canonicalEmailHash)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$AdminCanonicalEmailBlockCopyWith<$Res> implements $AdminCanonicalEmailBlockCopyWith<$Res> {
+  factory _$AdminCanonicalEmailBlockCopyWith(_AdminCanonicalEmailBlock value, $Res Function(_AdminCanonicalEmailBlock) _then) = __$AdminCanonicalEmailBlockCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'id') String? id,@JsonKey(name: 'canonical_email_hash') String? canonicalEmailHash
+});
+
+
+
+
+}
+/// @nodoc
+class __$AdminCanonicalEmailBlockCopyWithImpl<$Res>
+    implements _$AdminCanonicalEmailBlockCopyWith<$Res> {
+  __$AdminCanonicalEmailBlockCopyWithImpl(this._self, this._then);
+
+  final _AdminCanonicalEmailBlock _self;
+  final $Res Function(_AdminCanonicalEmailBlock) _then;
+
+/// Create a copy of AdminCanonicalEmailBlock
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = freezed,Object? canonicalEmailHash = freezed,}) {
+  return _then(_AdminCanonicalEmailBlock(
+id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String?,canonicalEmailHash: freezed == canonicalEmailHash ? _self.canonicalEmailHash : canonicalEmailHash // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

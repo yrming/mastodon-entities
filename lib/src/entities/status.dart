@@ -14,7 +14,7 @@ part 'status.g.dart';
 
 /// Represents a status posted by an account.
 @freezed
-class Status with _$Status {
+abstract class Status with _$Status {
   const factory Status({
     /// ID of the status in the database.
     @JsonKey(name: 'id') final String? id,
@@ -126,7 +126,7 @@ class Status with _$Status {
 }
 
 @freezed
-class StatusMention with _$StatusMention {
+abstract class StatusMention with _$StatusMention {
   const factory StatusMention({
     /// The account ID of the mentioned user.
     @JsonKey(name: 'id') final String? id,
@@ -147,7 +147,7 @@ class StatusMention with _$StatusMention {
 }
 
 @freezed
-class StatusTag with _$StatusTag {
+abstract class StatusTag with _$StatusTag {
   const factory StatusTag({
     /// The value of the hashtag after the # sign.
     @JsonKey(name: 'name') final String? name,

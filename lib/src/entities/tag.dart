@@ -5,7 +5,7 @@ part 'tag.g.dart';
 
 /// Represents a hashtag used within the content of a status.
 @freezed
-class Tag with _$Tag {
+abstract class Tag with _$Tag {
   const factory Tag({
     /// The value of the hashtag after the # sign.
     @JsonKey(name: 'name') final String? name,
@@ -24,7 +24,7 @@ class Tag with _$Tag {
 }
 
 @freezed
-class TagHistory with _$TagHistory {
+abstract class TagHistory with _$TagHistory {
   const factory TagHistory({
     /// UNIX timestamp on midnight of the given day.
     @JsonKey(name: 'day') final String? day,
@@ -41,7 +41,7 @@ class TagHistory with _$TagHistory {
 }
 
 @freezed
-class AdminTag with _$AdminTag {
+abstract class AdminTag with _$AdminTag {
   const factory AdminTag({
     /// The ID of the Tag in the database.
     @JsonKey(name: 'id') final String? id,
